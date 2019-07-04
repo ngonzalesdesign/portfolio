@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+title: Work
+tags:
+  - nav
+navtitle: Work
+date: 2017-01-01
+permalink: /work/index.html
+---
+
+{% set postslist = collections.study %}
+{% include "components/postslist.njk" %}
+{% set postslist = collections.design %}
+{% include "components/postslist.njk" %}

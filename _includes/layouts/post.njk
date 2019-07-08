@@ -1,13 +1,13 @@
 ---
-layout: layouts/base.njk
+layout: layouts/blog.njk
 section: post
 ---
 
 <article>
-  <h1>{{ title }}</h1>
+  <h2>{{ title }}</h2>
   <p>
     <small>
-      <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by {{ metadata.author.name }}
+      <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
     </small>
   </p>
 

@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/blog.njk
 title: Blog
 tags:
   - nav
@@ -7,12 +7,7 @@ navtitle: Blog
 date: 2017-01-01
 permalink: /blog/index.html
 ---
-<aside>
-<h3>About the Blog</h3>
-<p>Writings of Natasha Gonzales. Mostly about design and web development, but I also talk about culture, writing, and social issues sometimes.</p>
-<hr>
-</aside>
-<section>
+
+
 {% set postslist = collections.posts %}
 {% include "components/postslist.njk" %}
-</section>

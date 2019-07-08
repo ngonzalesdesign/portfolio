@@ -7,8 +7,17 @@ navtitle: Work
 date: 2017-01-01
 permalink: /work/index.html
 ---
-
+<section>
+<h3>Case Studies</h3>
 {% set postslist = collections.study %}
 {% include "components/postslist.njk" %}
+</section>
+
+<section>
+<h3>Other Projects</h3>
 {% set postslist = collections.design %}
 {% include "components/postslist.njk" %}
+<h4>Non-visual projects</h4>
+{% set postslist = collections.design %}
+{% include "components/postslist.njk" %}
+</section>

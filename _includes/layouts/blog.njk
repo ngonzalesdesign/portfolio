@@ -12,11 +12,18 @@
 			</a>
 
 			{% include "components/nav.njk" %}
-			
+			<h2>blog</h2>
 		</header>
 
 		<main>
+		<aside>
+<h3>About the Blog</h3>
+<p>Writings of Natasha Gonzales. Mostly about design and web development, but I also talk about culture, writing, and social issues sometimes.</p>
+<hr>
+</aside>
+<section>
 			{{ layoutContent | safe }}
+			</section>
 		</main>
 
 		{% include "components/footer.njk" %}

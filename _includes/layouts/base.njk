@@ -8,11 +8,23 @@
 		<header>
 			<a href="{{ '/' | url }}">
 				<img src="" alt="logo for natasha gonzales design"/>
-				<h1>Natasha gonzales</h1>
+				{% if navtitle == 'Home' %}
+				<h1>Natasha Gonzales</h1>
+				{% else %}
+				<span>Natasha Gonzales</h1>
+				{% endif %}
 			</a>
 
 			{% include "components/nav.njk" %}
-			
+				{% if 'post' in tags  %}
+				<span>Blog</span>
+				<h1>{{title}}</h1>
+				{% elif 'study' in tags %}
+				<span>Work</span>
+				<h1>{{title}}</h1>
+				{% elif navtitle != 'Home' %}
+				<h1>{{title}}</h1>
+				{% endif %}
 		</header>
 
 		<main>

@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "A boilerplate for building a fast static website with the Eleventy static site generator, for deployment to Netlify.",
   "scripts": {
-    "css": "postcss _postcss/input.css -o _includes/assets/css/styles.css -w",
+    "css": "postcss _includes/assets/css/input.css -o _includes/assets/css/styles.css -w",
     "build": "npx eleventy",
     "postbuild": "npx eleventy --serve",
     "watch": "npx eleventy --watch",
@@ -36,6 +36,7 @@
     "postcss-color-function": "^4.1.0",
     "postcss-import": "^12.0.1",
     "postcss-import-ext-glob": "^1.1.0",
+    "postcss-scale": "^1.0.1",
     "precss": "^4.0.0",
     "uglify-es": "^3.3.9"
   }

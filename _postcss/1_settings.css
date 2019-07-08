@@ -1,0 +1,43 @@
+/*----- FONTS -----*/
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700&display=swap");
+
+@font-face {
+  font-family: "choplin";
+  src: url("https://res.cloudinary.com/dxij3wtkk/raw/upload/v1546715547/portfolio/rene_bieder_-_choplin_medium-demo-webfont.woff2")
+      format("woff2"),
+    url("https://res.cloudinary.com/dxij3wtkk/raw/upload/v1546663049/portfolio/rene_bieder_-_choplin_medium-demo-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "choplin lt";
+  src: url("https://res.cloudinary.com/dxij3wtkk/raw/upload/v1546715547/portfolio/rene_bieder_-_choplin_extralight-demo-webfont.woff2")
+      format("woff2"),
+    url("https://res.cloudinary.com/dxij3wtkk/raw/upload/v1546663049/portfolio/rene_bieder_-_choplin_extralight-demo-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*----- MEDIA QUERIES ------*/
+@custom-media --small (max-width: 30em);
+@custom-media --med (min-width: 30em);
+@custom-media --large (min-width: 60em);
+
+/*----- VARIABLES ----- */
+:root {
+  /* Colors */
+  --pri: #db0042;
+  --sec: #01b9e1;
+  --ter: #f7d042;
+
+  --black: #333;
+  --white: #faf3e5;
+
+  /* Font Stacks */
+  --mainfont: "Raleway", sans-serif;
+  --display: "choplin", serif;
+  --displayLt: "choplin lt", serif;
+}

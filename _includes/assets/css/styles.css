@@ -284,7 +284,3 @@ template {
 [hidden] {
   display: none;
 }
-body {
-  background: #faf1de;
-  background: var(--white);
-}

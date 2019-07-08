@@ -1,6 +1,2 @@
 @import "1_colors.css";
 @import "3_normalize.css";
-
-body {
-  background: var(--white);
-}

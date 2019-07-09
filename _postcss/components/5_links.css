@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.cta {
+  border: 3px solid var(--black);
+  border-radius: 100px;
+  padding: 5px 20px;
+  @extend %display;
+  color: var(--pri);
+}

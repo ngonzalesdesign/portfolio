@@ -1,0 +1,5 @@
+%display {
+  font-family: var(--display);
+  text-transform: lowercase;
+  font-weight: normal;
+}

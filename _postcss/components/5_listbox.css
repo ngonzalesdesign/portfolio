@@ -1,0 +1,9 @@
+.listbox ul {
+  display: flex;
+}
+
+.listbox li:before {
+  content: "+";
+  padding-right: 5px;
+  padding-left: 20px;
+}

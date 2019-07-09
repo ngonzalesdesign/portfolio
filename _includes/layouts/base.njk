@@ -9,17 +9,17 @@
 			<a href="{{ '/' | url }}">
 				<img src="" alt="logo for natasha gonzales design"/>
 				{% if navtitle == 'Home' %}
-				<h1>Natasha Gonzales</h1>
+				<h1 class="site-title">Natasha Gonzales</h1>
 				{% else %}
-				<span>Natasha Gonzales</h1>
+				<span class="site-title">Natasha Gonzales</h1>
 				{% endif %}
 			</a>
 
 			{% include "components/nav.njk" %}
-				{% if 'post' in tags  %}
+				{% if permalink.includes('post')  %}
 				<span>Blog</span>
 				<h1>{{title}}</h1>
-				{% elif 'study' in tags %}
+				{% elif permalink.includes('projects') %}
 				<span>Work</span>
 				<h1>{{title}}</h1>
 				{% elif navtitle != 'Home' %}
@@ -30,7 +30,7 @@
 		<main>
 			{{ layoutContent | safe }}
 		</main>
-
+	
 		{% include "components/footer.njk" %}
 
 	</body>

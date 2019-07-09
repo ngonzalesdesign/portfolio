@@ -315,3 +315,54 @@ template {
 [hidden] {
   display: none;
 }
+body {
+  color: var(--black);
+  background: var(--white);
+  font-family: var(--mainfont);
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.site-title{
+  font-family: var(--display);
+  text-transform: lowercase;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+.cta {
+  border: 3px solid var(--black);
+  border-radius: 100px;
+  padding: 5px 20px;
+  font-family: var(--display);
+  text-transform: lowercase;
+  font-weight: normal;
+  color: var(--pri);
+}
+.listbox ul {
+  display: flex;
+}
+.listbox li:before {
+  content: "+";
+  padding-right: 5px;
+  padding-left: 20px;
+}
+nav ul {
+  display: flex;
+  font-family: var(--display);
+  text-transform: lowercase;
+  font-weight: normal;
+}
+nav li {
+  padding: 20px;
+}
+.social {
+  display: flex;
+}
+.ico span {
+  display: none;
+}

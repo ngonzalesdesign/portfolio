@@ -1,0 +1,11 @@
+body {
+  color: var(--black);
+  background: var(--white);
+  font-family: var(--mainfont);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

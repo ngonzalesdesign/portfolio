@@ -1,10 +1,16 @@
 .listbox ul {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+}
+
+.listbox li {
+  flex: 1;
 }
 
 .listbox li:before {
   padding-right: var(--small);
-  padding-left: var(--std);
+
   content: "+";
 }
 

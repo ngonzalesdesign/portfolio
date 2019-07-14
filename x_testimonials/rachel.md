@@ -6,4 +6,4 @@ tags:
   - testimonial
 ---
 
-Natasha's work gives my business a professional look that represents the core of my mission, as well as attracting customer interest. She is receptive to ideas, wonderful to collaborate with, and is able to take the vision of what sorts of designs I have in my head to the next level. Her work for my brand makes her an indispensable part of my business, and I will come to her for all of my design needs from now on!Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Natasha's work gives my business a professional look that represents the core of my mission, as well as attracting customer interest. She is receptive to ideas, wonderful to collaborate with, and is able to take the vision of what sorts of designs I have in my head to the next level. Her work for my brand makes her an indispensable part of my business, and I will come to her for all of my design needs from now on!

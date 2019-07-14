@@ -1,0 +1,27 @@
+.testimonial p:before {
+  content: "“ ";
+  @extend %display;
+  color: var(--pri);
+}
+
+.testimonial p:after {
+  content: "”";
+  @extend %display;
+  color: var(--pri);
+}
+
+.testimonial cite:before {
+  content: "";
+  position: relative;
+  top: -4px;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  margin-right: 10px;
+  background: var(--black);
+}
+
+.testimonial a {
+  display: block;
+  font-weight: normal;
+}

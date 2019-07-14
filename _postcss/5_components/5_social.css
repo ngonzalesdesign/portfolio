@@ -1,0 +1,14 @@
+.social {
+  display: flex;
+}
+
+.ico a:after {
+  all: unset;
+}
+.ico span {
+  display: none;
+}
+
+.named img {
+  display: none;
+}

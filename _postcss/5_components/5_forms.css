@@ -1,0 +1,25 @@
+button {
+  display: block;
+  padding: 10px;
+  @extend %display;
+  background: var(--pri);
+  color: var(--white);
+  border: none;
+  border-bottom: 3px solid color-mod(var(--pri) b(30%));
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 3px solid var(--black);
+}
+
+textarea {
+  background: none;
+  border: none;
+}
+
+label {
+  @extend %display;
+  display: block;
+}

@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,400i,600&display=swap");
 /*----- FONTS -----*/
 @font-face {
   font-family: "choplin";
@@ -26,12 +26,12 @@
 /*----- VARIABLES ----- */
 :root {
   /* Colors */
-  --pri: #db0042;
-  --sec: #01b9e1;
-  --ter: #f7d042;
+  --pri: #aa469b;
+  --sec: #7b3470;
+  --ter: #d27fc8;
 
   --black: #333;
-  --white: #faf3e5;
+  --white: #f3efe7;
 
   /* Font Stacks */
   --mainfont: "Raleway", sans-serif;
@@ -315,33 +315,139 @@ template {
 [hidden] {
   display: none;
 }
+html {
+  background: var(--white);
+}
 body {
   color: var(--black);
-  background: var(--white);
   font-family: var(--mainfont);
+  font-size: 1em;
+  line-height: 1.4;
+}
+body:before {
+  content: "";
+  position: fixed;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  background: url(/static/img/bg.svg);
+  background-size: auto 100vh;
+  background-position: bottom right;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  filter: brightness(60%) sepia(20%) saturate(1000%) hue-rotate(220deg);
+
+  mix-blend-mode: color-burn;
+}
+.dark {
+  color: var(--white);
+  background: var(--black);
+}
+main {
+  padding: 20px;
+}
+p {
+  max-width: 37em;
 }
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.site-title{
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+cite{
+  text-transform: lowercase;
+  font-style: normal;
+  font-weight: bold;
+}
+.color-bg {
+  background: var(--sec);
+  color: var(--white);
+}
+footer{
+  text-transform: lowercase;
+  text-align: right;
+}
+button {
+  display: block;
+  padding: 10px;
   font-family: var(--display);
   text-transform: lowercase;
   font-weight: normal;
+  background: var(--pri);
+  color: var(--white);
+  border: none;
+  border-bottom: 3px solid rgb(179, 70, 162);
 }
-a {
-  text-decoration: none;
+input {
+  background: none;
+  border: none;
+  border-bottom: 3px solid var(--black);
+}
+textarea {
+  background: none;
+  border: none;
+}
+label{
+  font-family: var(--display);
+  text-transform: lowercase;
+  font-weight: normal;
+  display: block;
+}
+.site-title {
+  margin: 0;
+  margin-left: -30px;
+  padding: 0;
+  font-family: var(--display);
+  text-transform: lowercase;
+  font-weight: normal;
+  font-size: calc(((8 - 3) * ((100vw) - 20em) / (50 - 20)) + 3em);
+  line-height: 0.8;
+  text-align: center;
   color: var(--black);
 }
-.cta {
-  border: 3px solid var(--black);
-  border-radius: 100px;
-  padding: 5px 20px;
+.site-title span {
+  margin-left: 30px;
+}
+.cat-head{
   font-family: var(--display);
   text-transform: lowercase;
   font-weight: normal;
+}
+.cat-head:after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  bottom: 20px;
+  width: 100%;
+  height: 5px;
+  background: var(--black);
+}
+.dark .cat-head:after {
+  background: var(--white);
+}
+a {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
   color: var(--pri);
+}
+.cta {
+  border: 3px solid var(--pri);
+  border-radius: 100px;
+  padding: 5px 20px;
+  text-transform: lowercase;
+  font-weight: 600;
+  color: var(--pri);
+}
+.cta-bright {
+  border-color: var(--pri);
 }
 .listbox ul {
   display: flex;
@@ -351,18 +457,69 @@ a {
   padding-right: 5px;
   padding-left: 20px;
 }
+.lb-head{
+  text-transform: lowercase;
+}
+header a:after {
+  all: unset;
+}
 nav ul {
+  margin-left: 20%;
   display: flex;
+  width: 70%;
   font-family: var(--display);
   text-transform: lowercase;
   font-weight: normal;
 }
 nav li {
-  padding: 20px;
+  text-align: center;
+  flex: 1;
 }
 .social {
   display: flex;
 }
+.ico a:after {
+  all: unset;
+}
 .ico span {
   display: none;
+}
+.named img {
+  display: none;
+}
+.testimonial p:before {
+  content: "“ ";
+  font-family: var(--display);
+  text-transform: lowercase;
+  font-weight: normal;
+  color: var(--pri);
+}
+.testimonial p:after {
+  content: "”";
+  font-family: var(--display);
+  text-transform: lowercase;
+  font-weight: normal;
+  color: var(--pri);
+}
+.testimonial cite:before {
+  content: "";
+  position: relative;
+  top: -4px;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  margin-right: 10px;
+  background: var(--black);
+}
+.testimonial a {
+  display: block;
+  font-weight: normal;
+}
+.atf {
+  text-align: center;
+}
+.logo {
+  width: 30vh;
+  display: block;
+  margin: 0 auto;
 }

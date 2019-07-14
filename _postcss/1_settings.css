@@ -1,5 +1,5 @@
 /*----- FONTS -----*/
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,400i,600&display=swap");
 
 @font-face {
   font-family: "choplin";
@@ -29,12 +29,12 @@
 /*----- VARIABLES ----- */
 :root {
   /* Colors */
-  --pri: #db0042;
-  --sec: #01b9e1;
-  --ter: #f7d042;
+  --pri: #aa469b;
+  --sec: #7b3470;
+  --ter: #d27fc8;
 
   --black: #333;
-  --white: #faf3e5;
+  --white: #f3efe7;
 
   /* Font Stacks */
   --mainfont: "Raleway", sans-serif;

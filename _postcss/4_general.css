@@ -1,11 +1,63 @@
+html {
+  background: var(--white);
+}
+
 body {
   color: var(--black);
-  background: var(--white);
   font-family: var(--mainfont);
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  background: url(/static/img/bg.svg);
+  background-size: auto 100vh;
+  background-position: bottom right;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  filter: brightness(60%) sepia(20%) saturate(1000%) hue-rotate(220deg);
+
+  mix-blend-mode: color-burn;
+}
+
+.dark {
+  color: var(--white);
+  background: var(--black);
+}
+
+main {
+  padding: 20px;
+}
+
+p {
+  max-width: 37em;
 }
 
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+cite {
+  @extend %lower;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.color-bg {
+  background: var(--sec);
+  color: var(--white);
 }

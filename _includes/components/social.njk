@@ -1,7 +1,7 @@
 {% set links = [
   { name: 'twitter', icon: 'tumblr', link: 'https://twitter.com/ngonzalesdesign'},
   { name: 'tumblr', icon: 'tumblr', link: 'https://ngonzalesdesign.tumblr.com'},
-  { name: 'tumblr', icon: 'tumblr', link: 'https://instagram.com/ngonzalesdesign'}
+  { name: 'instagram', icon: 'instagram', link: 'https://instagram.com/ngonzalesdesign'}
 ] %}
 
 
@@ -10,7 +10,7 @@
     <li>
       <a href="{{ link.site }}">
         <img src="{{ link.icon }}" alt="{{ link.name }} icon"/>
-        <span>whoo</span>
+        <span>{{ link.name}}</span>
       </a>
     </li>
   {% endfor %}

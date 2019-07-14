@@ -7,3 +7,7 @@
   padding-right: 5px;
   padding-left: 20px;
 }
+
+.lb-head {
+  @extend %lower;
+}

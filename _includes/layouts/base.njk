@@ -2,14 +2,18 @@
 <html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
 
 	{% include "components/head.njk" %}
-
+    
+	{% if permalink.includes('404')  %}
+	<body class="dark">
+	{% else %}
 	<body>
+	{% endif %}
 
 		<header>
 			<a href="{{ '/' | url }}">
-				<img src="" alt="logo for natasha gonzales design"/>
+				<img src="/static/img/logo.svg" alt="logo for natasha gonzales design" class="logo"/>
 				{% if navtitle == 'Home' %}
-				<h1 class="site-title">Natasha Gonzales</h1>
+				<h1 class="site-title">Natasha <span>Gonzales</span></h1>
 				{% else %}
 				<span class="site-title">Natasha Gonzales</h1>
 				{% endif %}
@@ -17,13 +21,13 @@
 
 			{% include "components/nav.njk" %}
 				{% if permalink.includes('post')  %}
-				<span>Blog</span>
+				<span class="cat-head">Blog</span>
 				<h1>{{title}}</h1>
 				{% elif permalink.includes('projects') %}
-				<span>Work</span>
+				<span class="cat-head">Work</span>
 				<h1>{{title}}</h1>
 				{% elif navtitle != 'Home' %}
-				<h1>{{title}}</h1>
+				<h1 class="cat-head">{{title}}</h1>
 				{% endif %}
 		</header>
 

@@ -1,8 +1,0 @@
-nav ul {
-  display: flex;
-  @extend %display;
-}
-
-nav li {
-  padding: 20px;
-}

@@ -1,0 +1,4 @@
+footer {
+  @extend %lower;
+  text-align: right;
+}

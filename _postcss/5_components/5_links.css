@@ -1,0 +1,20 @@
+a {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: var(--pri);
+}
+
+.cta {
+  border: 3px solid var(--pri);
+  border-radius: 100px;
+  padding: 5px 20px;
+  @extend %lower;
+  font-weight: 600;
+  color: var(--pri);
+}
+
+.cta-bright {
+  border-color: var(--pri);
+}

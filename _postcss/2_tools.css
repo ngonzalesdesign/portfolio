@@ -3,3 +3,7 @@
   text-transform: lowercase;
   font-weight: normal;
 }
+
+%lower {
+  text-transform: lowercase;
+}

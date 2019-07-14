@@ -1,0 +1,14 @@
+header a:after {
+  all: unset;
+}
+nav ul {
+  margin-left: 20%;
+  display: flex;
+  width: 70%;
+  @extend %display;
+}
+
+nav li {
+  text-align: center;
+  flex: 1;
+}

@@ -1,7 +1,7 @@
 %display {
+  font-weight: normal;
   font-family: var(--display);
   text-transform: lowercase;
-  font-weight: normal;
 }
 
 %lower {

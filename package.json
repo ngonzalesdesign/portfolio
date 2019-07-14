@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-netlify-boilerplate",
+  "name": "Natasha Gonzales Design",
   "version": "1.0.1",
-  "description": "A boilerplate for building a fast static website with the Eleventy static site generator, for deployment to Netlify.",
+  "description": "Portfolio site and blog for designer/developer Natasha Gonzales",
   "scripts": {
     "css": "postcss _includes/assets/css/input.css -o _includes/assets/css/styles.css -w",
     "build": "npx eleventy",
@@ -11,25 +11,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danurbanowicz/eleventy-netlify-boilerplate"
+    "url": "https://github.com/ngonzalesdesign/portfolio"
   },
   "author": {
-    "name": "Dan Urbanowicz",
-    "email": "dan.urbanowicz@gmail.com",
-    "url": "https://www.danurbanowicz.com/"
+    "name": "Natasha Gonzales",
+    "email": "design@natashagonzales.com",
+    "url": "https://www.natashagonzales.com/"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/danurbanowicz/eleventy-netlify-boilerplate/issues"
+  "homepage": "https://github.com/ngonzalesdesign/portfolio",
+  "stylelint": {
+    "extends": "stylelint-config-rational-order"
   },
-  "homepage": "https://github.com/danurbanowicz/eleventy-netlify-boilerplate",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.2",
     "luxon": "^1.12.1",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2",
     "postcss-color-mod-function": "^3.0.3",
-    "postcss-extend-rule": "^2.0.0"
+    "postcss-extend-rule": "^2.0.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.1"
   },
   "dependencies": {
     "clean-css": "^4.2.1",

@@ -2,8 +2,8 @@ button {
   display: block;
   padding: 10px;
   @extend %display;
-  background: var(--pri);
   color: var(--white);
+  background: var(--pri);
   border: none;
   border-bottom: 3px solid color-mod(var(--pri) b(30%));
 }

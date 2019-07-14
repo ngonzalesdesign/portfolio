@@ -323,6 +323,7 @@ body {
   font-family: var(--mainfont);
   font-size: 1em;
   line-height: 1.4;
+  word-wrap: break-word;
 }
 body:before {
   content: "";
@@ -346,7 +347,7 @@ body:before {
   background: var(--black);
 }
 main {
-  padding: 20px;
+  padding: 0 20px;
 }
 p {
   max-width: 37em;
@@ -487,19 +488,26 @@ nav li {
 .named img {
   display: none;
 }
-.testimonial p:before {
+.testimonial p:before,
+.testimonial p:after {
   content: "“ ";
+  position: relative;
+  top: 7px;
+  left: 5px;
+}
+.testimonial p:before, .testimonial p:after{
   font-family: var(--display);
   text-transform: lowercase;
   font-weight: normal;
+}
+.testimonial p:before,
+.testimonial p:after {
+  font-size: 2em;
+  line-height: 0;
   color: var(--pri);
 }
 .testimonial p:after {
   content: "”";
-  font-family: var(--display);
-  text-transform: lowercase;
-  font-weight: normal;
-  color: var(--pri);
 }
 .testimonial cite:before {
   content: "";
@@ -516,10 +524,19 @@ nav li {
   font-weight: normal;
 }
 .atf {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  padding: 0 20px;
 }
 .logo {
   width: 30vh;
   display: block;
   margin: 0 auto;
+}
+.services {
+  padding: 20px;
+  display: grid;
 }

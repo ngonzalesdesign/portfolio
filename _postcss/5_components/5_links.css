@@ -2,17 +2,17 @@ a {
   display: inline-block;
   margin: 0;
   padding: 0;
-  text-decoration: none;
   color: var(--pri);
+  text-decoration: none;
 }
 
 .cta {
-  border: 3px solid var(--pri);
-  border-radius: 100px;
   padding: 5px 20px;
+  color: var(--pri);
   @extend %lower;
   font-weight: 600;
-  color: var(--pri);
+  border: 3px solid var(--pri);
+  border-radius: 100px;
 }
 
 .cta-bright {

@@ -30,11 +30,12 @@ body:before {
 }
 
 main {
-  padding: 0 20px;
+  padding: 0 var(--std);
 }
 
 p {
   max-width: 37em;
+  margin-top: 0;
 }
 
 ul {

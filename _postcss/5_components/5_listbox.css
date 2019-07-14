@@ -3,8 +3,8 @@
 }
 
 .listbox li:before {
-  padding-right: 5px;
-  padding-left: 20px;
+  padding-right: var(--small);
+  padding-left: var(--std);
   content: "+";
 }
 

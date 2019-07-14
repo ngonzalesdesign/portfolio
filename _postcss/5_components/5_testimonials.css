@@ -1,8 +1,8 @@
 .testimonial p:before,
 .testimonial p:after {
   position: relative;
-  top: 7px;
-  left: 5px;
+  top: 10px;
+  left: var(--small);
   color: var(--pri);
   @extend %display;
   font-size: 2em;

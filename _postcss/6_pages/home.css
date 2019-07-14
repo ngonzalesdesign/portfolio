@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   margin: 0;
-  padding: 0 20px;
 }
 
 .logo {
@@ -14,5 +13,5 @@
 
 .services {
   display: grid;
-  padding: 20px;
+  padding: var(--std);
 }

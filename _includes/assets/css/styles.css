@@ -37,6 +37,11 @@
   --mainfont: "Raleway", sans-serif;
   --display: "choplin", serif;
   --displayLt: "choplin lt", serif;
+
+  /* Sizing */
+  --small: 5px;
+
+  --std: 20px;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -320,55 +325,52 @@ html {
 }
 body {
   color: var(--black);
-  font-family: var(--mainfont);
   font-size: 1em;
+  font-family: var(--mainfont);
   line-height: 1.4;
   word-wrap: break-word;
 }
 body:before {
-  content: "";
   position: fixed;
+  z-index: -1;
   display: block;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
-
-  background: url(/static/img/bg.svg);
-  background-size: auto 100vh;
+  background: url(/static/img/bg.svg) repeat-x;
   background-position: bottom right;
-  background-repeat: repeat-x;
-  background-attachment: fixed;
+  background-size: auto 100vh;
   filter: brightness(60%) sepia(20%) saturate(1000%) hue-rotate(220deg);
-
   mix-blend-mode: color-burn;
+  content: "";
 }
 .dark {
   color: var(--white);
   background: var(--black);
 }
 main {
-  padding: 0 20px;
+  padding: 0 var(--std);
 }
 p {
   max-width: 37em;
+  margin-top: 0;
 }
 ul {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 blockquote {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 cite{
   text-transform: lowercase;
-  font-style: normal;
   font-weight: bold;
+  font-style: normal;
 }
 .color-bg {
-  background: var(--sec);
   color: var(--white);
+  background: var(--sec);
 }
 footer{
   text-transform: lowercase;
@@ -377,11 +379,11 @@ footer{
 button {
   display: block;
   padding: 10px;
+  font-weight: normal;
   font-family: var(--display);
   text-transform: lowercase;
-  font-weight: normal;
-  background: var(--pri);
   color: var(--white);
+  background: var(--pri);
   border: none;
   border-bottom: 3px solid rgb(179, 70, 162);
 }
@@ -395,39 +397,34 @@ textarea {
   border: none;
 }
 label{
+  font-weight: normal;
   font-family: var(--display);
   text-transform: lowercase;
-  font-weight: normal;
   display: block;
 }
 .site-title {
   margin: 0;
-  margin-left: -30px;
-  padding: 0;
+  color: var(--black);
+  font-weight: normal;
   font-family: var(--display);
   text-transform: lowercase;
-  font-weight: normal;
   font-size: calc(((8 - 3) * ((100vw) - 20em) / (50 - 20)) + 3em);
   line-height: 0.8;
   text-align: center;
-  color: var(--black);
-}
-.site-title span {
-  margin-left: 30px;
 }
 .cat-head{
+  font-weight: normal;
   font-family: var(--display);
   text-transform: lowercase;
-  font-weight: normal;
 }
 .cat-head:after {
-  content: "";
   position: relative;
+  bottom: var(--std);
   display: inline-block;
-  bottom: 20px;
   width: 100%;
-  height: 5px;
+  height: var(--small);
   background: var(--black);
+  content: "";
 }
 .dark .cat-head:after {
   background: var(--white);
@@ -436,16 +433,16 @@ a {
   display: inline-block;
   margin: 0;
   padding: 0;
-  text-decoration: none;
   color: var(--pri);
+  text-decoration: none;
 }
 .cta {
-  border: 3px solid var(--pri);
-  border-radius: 100px;
-  padding: 5px 20px;
+  padding: var(--small) var(--std);
+  color: var(--pri);
   text-transform: lowercase;
   font-weight: 600;
-  color: var(--pri);
+  border: 3px solid var(--pri);
+  border-radius: 100px;
 }
 .cta-bright {
   border-color: var(--pri);
@@ -454,27 +451,23 @@ a {
   display: flex;
 }
 .listbox li:before {
+  padding-right: var(--small);
+  padding-left: var(--std);
   content: "+";
-  padding-right: 5px;
-  padding-left: 20px;
 }
 .lb-head{
   text-transform: lowercase;
 }
-header a:after {
-  all: unset;
-}
 nav ul {
-  margin-left: 20%;
   display: flex;
-  width: 70%;
+  padding: var(--std);
+  font-weight: normal;
   font-family: var(--display);
   text-transform: lowercase;
-  font-weight: normal;
 }
 nav li {
-  text-align: center;
   flex: 1;
+  text-align: center;
 }
 .social {
   display: flex;
@@ -490,27 +483,26 @@ nav li {
 }
 .testimonial p:before,
 .testimonial p:after {
-  content: "“ ";
   position: relative;
-  top: 7px;
-  left: 5px;
+  top: 10px;
+  left: var(--small);
+  color: var(--pri);
 }
 .testimonial p:before, .testimonial p:after{
+  font-weight: normal;
   font-family: var(--display);
   text-transform: lowercase;
-  font-weight: normal;
 }
 .testimonial p:before,
 .testimonial p:after {
   font-size: 2em;
   line-height: 0;
-  color: var(--pri);
+  content: "“ ";
 }
 .testimonial p:after {
   content: "”";
 }
 .testimonial cite:before {
-  content: "";
   position: relative;
   top: -4px;
   display: inline-block;
@@ -518,6 +510,7 @@ nav li {
   height: 3px;
   margin-right: 10px;
   background: var(--black);
+  content: "";
 }
 .testimonial a {
   display: block;
@@ -527,16 +520,14 @@ nav li {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 0;
-  padding: 0 20px;
 }
 .logo {
-  width: 30vh;
   display: block;
+  width: 30vh;
   margin: 0 auto;
 }
 .services {
-  padding: 20px;
   display: grid;
+  padding: var(--std);
 }

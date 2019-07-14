@@ -7,7 +7,7 @@ a {
 }
 
 .cta {
-  padding: 5px 20px;
+  padding: var(--small) var(--std);
   color: var(--pri);
   @extend %lower;
   font-weight: 600;

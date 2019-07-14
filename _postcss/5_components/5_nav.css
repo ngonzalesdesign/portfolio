@@ -1,10 +1,6 @@
-header a:after {
-  all: unset;
-}
 nav ul {
   display: flex;
-  width: 70%;
-  margin-left: 20%;
+  padding: var(--std);
   @extend %display;
 }
 

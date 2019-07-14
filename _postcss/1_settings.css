@@ -40,4 +40,9 @@
   --mainfont: "Raleway", sans-serif;
   --display: "choplin", serif;
   --displayLt: "choplin lt", serif;
+
+  /* Sizing */
+  --small: 5px;
+
+  --std: 20px;
 }

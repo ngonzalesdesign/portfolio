@@ -8,27 +8,34 @@ h6 {
   line-height: 2;
 }
 .site-title {
-  display: block;
+  margin-bottom: var(--std);
   color: var(--black);
   @extend %display;
 }
 
 .title-atf {
-  font-size: scale(20em, 50em, 3em, 8em, 100vw);
+  bottom: 0;
+  font-size: scale(20em, 50em, 3.8em, 8em, 100vw);
   line-height: 0.8;
   text-align: center;
 }
 
 .cat-head {
+  display: flex;
+  width: 100%;
+align-items: center;
+justify-content: right;
   @extend %display;
+    font-size: scale(20em, 50em, 1.5em, 2em, 100vw);
+  line-height: .8;
 }
 
 .cat-head:after {
   position: relative;
-  bottom: var(--std);
   display: inline-block;
-  width: 100%;
+  width: 100px;
   height: var(--small);
+  margin-left: 10px;
   background: var(--black);
   content: "";
 }

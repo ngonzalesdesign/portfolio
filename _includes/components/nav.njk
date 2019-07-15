@@ -1,6 +1,6 @@
-<nav {% if navtitle == 'Home' %} class="atf atf-nav nav" {% else%} class="nav" {% endif %}>
+<nav {% if navtitle == 'Home' %} class="atf atf-nav nav" {% else%} class="nav fixed" {% endif %}>
 			<a href="{{ '/' | url }}" class="brand">
-				<img src="/static/img/logo.svg" alt="logo for natasha gonzales design" class="logo" />
+				{% include "../components/logo.njk" %}
 				{% if navtitle == 'Home' %}
 				<h1 class="site-title title-atf">Natasha <span>Gonzales</span></h1>
 				{% else %}

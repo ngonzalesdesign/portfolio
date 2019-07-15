@@ -1,11 +1,9 @@
 .atf {
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 0;
-}
-
-.atf-nav{
-  position: static;
+  margin-bottom: var(--std);
 }
 
 .atf .brand {

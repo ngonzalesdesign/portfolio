@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,400i,600&display=swap");
 /*----- FONTS -----*/
 @font-face {
@@ -23,7 +24,7 @@
   /* Colors */
   --pri: #aa469b;
   --sec: #7b3470;
-  --ter: #d27fc8;
+  --ter: #BF4EAE;
 
   --black: #333;
   --white: #f3efe7;
@@ -37,14 +38,6 @@
   --small: 5px;
 
   --std: 20px;
-}
-@media (max-width: 30em) {
-  .nav {
-    position: fixed;
-    bottom: 0;
-    background: rgb(51, 70, 54);
-    background: rgb(51, 70, 54);
-  }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -114,7 +107,7 @@ abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted; /* 2 */
+          text-decoration: underline dotted; /* 2 */
 }
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
@@ -327,14 +320,18 @@ template {
 html {
   background: #f3efe7;
   background: var(--white);
+     color: #333;
+     color: var(--black);
 }
 body {
-  color: #333;
-  color: var(--black);
+   margin-bottom: calc(4 * 20px);
+   margin-bottom: calc(4 * var(--std));
+ 
   font-size: 1em;
   font-family: "Raleway", sans-serif;
   font-family: var(--mainfont);
   line-height: 1.4;
+
 }
 body:before {
   position: fixed;
@@ -346,19 +343,14 @@ body:before {
   background-position: bottom right;
   background-size: auto 100vh;
   -webkit-filter: brightness(60%) sepia(20%) saturate(1000%) hue-rotate(220deg);
-  filter: brightness(60%) sepia(20%) saturate(1000%) hue-rotate(220deg);
+          filter: brightness(60%) sepia(20%) saturate(1000%) hue-rotate(220deg);
   mix-blend-mode: color-burn;
   content: "";
-}
-.dark {
-  color: #f3efe7;
-  color: var(--white);
-  background: #333;
-  background: var(--black);
 }
 main {
   padding: 0 20px;
   padding: 0 var(--std);
+  min-height: 80vh;
 }
 section {
   margin-top: 20px;
@@ -377,7 +369,7 @@ blockquote {
   margin: 0;
   padding: 0;
 }
-cite {
+cite{
   text-transform: lowercase;
   font-weight: bold;
   font-style: normal;
@@ -397,7 +389,7 @@ footer {
   display: flex;
   align-content: center;
   -webkit-box-pack: end;
-  justify-content: flex-end;
+          justify-content: flex-end;
   text-transform: lowercase;
 }
 button {
@@ -425,7 +417,7 @@ textarea {
   background: none;
   border: none;
 }
-label {
+label{
   font-weight: normal;
   font-family: "choplin", serif;
   font-family: var(--display);
@@ -441,24 +433,51 @@ header {
 }
 .nav {
   display: -webkit-box;
-
   display: flex;
-  width: calc(100% - (2 * 20px));
-  width: calc(100% - (2 * var(--std)));
+-webkit-box-align: center;
+        align-items: center;
   padding: 0 20px;
   padding: 0 var(--std);
+}
+@media (max-width: 30em) {
+  .fixed {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - (20px));
+    width: calc(100% - (var(--std)));
+    padding:  10px;
+    background: #7b3470;
+    background: var(--sec);
+  }
+
+  .fixed .site-title {
+    display: none;
+  }
+
+  .fixed a {
+    color: #f3efe7;
+    color: var(--white);
+  }
+
+  .fixed .logo {
+    fill: #f3efe7;
+    fill: var(--white);
+  }
 }
 .brand {
   display: -webkit-box;
   display: flex;
 }
 .logo {
-  width: 40px;
+  width: 36px;
+  fill: #333;
+  fill: var(--black)
 }
 .menu {
   display: -webkit-box;
   display: flex;
   width: 100%;
+  margin-left: 10px;
   font-weight: normal;
   font-family: "choplin", serif;
   font-family: var(--display);
@@ -466,8 +485,8 @@ header {
 }
 .menu li {
   -webkit-box-flex: 1;
-  flex: 1;
-  text-align: center;
+          flex: 1;
+
 }
 h1,
 h2,
@@ -479,7 +498,8 @@ h6 {
   line-height: 2;
 }
 .site-title {
-  display: block;
+  margin-bottom: 20px;
+  margin-bottom: var(--std);
   color: #333;
   color: var(--black);
   font-weight: normal;
@@ -488,24 +508,33 @@ h6 {
   text-transform: lowercase;
 }
 .title-atf {
-  font-size: calc(((8 - 3) * ((100vw) - 20em) / (50 - 20)) + 3em);
+  bottom: 0;
+  font-size: calc(((8 - 3.8) * ((100vw) - 20em) / (50 - 20)) + 3.8em);
   line-height: 0.8;
   text-align: center;
 }
 .cat-head {
-  font-weight: normal;
-  font-family: "choplin", serif;
-  font-family: var(--display);
-  text-transform: lowercase;
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+-webkit-box-align: center;
+        align-items: center;
+-webkit-box-pack: right;
+        justify-content: right;
+font-weight: normal;
+font-family: "choplin", serif;
+font-family: var(--display);
+text-transform: lowercase;
+font-size: calc(((2 - 1.5) * ((100vw) - 20em) / (50 - 20)) + 1.5em);
+line-height: .8;
 }
 .cat-head:after {
   position: relative;
-  bottom: 20px;
-  bottom: var(--std);
   display: inline-block;
-  width: 100%;
+  width: 100px;
   height: 5px;
   height: var(--small);
+  margin-left: 10px;
   background: #333;
   background: var(--black);
   content: "";
@@ -554,7 +583,7 @@ a {
 
   content: "+";
 }
-.lb-head {
+.lb-head{
   text-transform: lowercase;
 }
 .social {
@@ -562,6 +591,7 @@ a {
   display: inline-flex;
   padding: 0 20px;
   padding: 0 var(--std);
+
 }
 .ico svg {
   fill: #aa469b;
@@ -595,8 +625,7 @@ a {
   color: #aa469b;
   color: var(--pri);
 }
-.testimonial p:before,
-.testimonial p:after {
+.testimonial p:before, .testimonial p:after{
   font-weight: normal;
   font-family: "choplin", serif;
   font-family: var(--display);
@@ -626,21 +655,52 @@ a {
   display: block;
   font-weight: normal;
 }
+.invert {
+  color: #f3efe7;
+  color: var(--white);
+  background: hsl(309.29577464788736, 40.5714285714%, 4.3137254902%);
+  background: hsl(309.29577464788736, 40.5714285714%, 4.3137254902%);
+}
+.invert body:before {
+ mix-blend-mode: color-dodge;
+ -webkit-filter: brightness(70%) sepia(20%) saturate(700%) hue-rotate(260deg);
+         filter: brightness(70%) sepia(20%) saturate(700%) hue-rotate(260deg)
+
+}
+.invert .cat-head:after {
+    background: #f3efe7;
+    background: var(--white);
+}
+.cta-bright {
+ color: #BF4EAE;
+ color: var(--ter);
+ border-color: #BF4EAE;
+ border-color: var(--ter);
+}
+.notfound {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center; 
+}
 .atf {
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  flex-direction: column;
+          flex-direction: column;
+  width: 100%;
   margin: 0;
-}
-.atf-nav {
-  position: static;
+  margin-bottom: 20px;
+  margin-bottom: var(--std);
 }
 .atf .brand {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+         flex-direction: column;
 }
 .atf .logo {
   display: block;
@@ -649,7 +709,7 @@ a {
 }
 .atf-content {
   -webkit-box-align: center;
-  align-items: center;
+          align-items: center;
 }
 .services {
   display: grid;

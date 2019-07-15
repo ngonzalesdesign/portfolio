@@ -1,12 +1,17 @@
 html {
   background: var(--white);
+     color: var(--black);
 }
 
+
+
 body {
-  color: var(--black);
+   margin-bottom: calc(4 * var(--std));
+ 
   font-size: 1em;
   font-family: var(--mainfont);
   line-height: 1.4;
+
 }
 
 body:before {
@@ -23,13 +28,11 @@ body:before {
   content: "";
 }
 
-.dark {
-  color: var(--white);
-  background: var(--black);
-}
+
 
 main {
   padding: 0 var(--std);
+  min-height: 80vh;
 }
 
 section {

@@ -5,31 +5,50 @@ header {
 }
 
 .nav {
-  
   display: flex;
-  width: calc(100% - (2 * var(--std)));
+align-items: center;
   padding: 0 var(--std);
 }
 
+@media (--small) {
+  .fixed {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - (var(--std)));
+    padding:  10px;
+    background: var(--sec);
+  }
 
+  .fixed .site-title {
+    display: none;
+  }
 
+  .fixed a {
+    color: var(--white);
+  }
+
+  .fixed .logo {
+    fill: var(--white);
+  }
+}
 
 .brand {
   display: flex;
 }
 
 .logo {
-  width: 40px;
+  width: 36px;
+  fill: var(--black)
 }
 
 .menu {
   display: flex;
   width: 100%;
-
+  margin-left: 10px;
   @extend %display;
 }
 
 .menu li {
   flex: 1;
-  text-align: center;
+
 }

@@ -21,14 +21,14 @@
   font-style: normal;
 }
 
-@custom-media --tablet (max-width: 30em);
+@custom-media --small (max-width: 30em);
 
 /*----- VARIABLES ----- */
 :root {
   /* Colors */
   --pri: #aa469b;
   --sec: #7b3470;
-  --ter: #d27fc8;
+  --ter: #BF4EAE;
 
   --black: #333;
   --white: #f3efe7;
@@ -42,12 +42,4 @@
   --small: 5px;
 
   --std: 20px;
-}
-
-@media (--tablet) {
-  .nav {
-    position: fixed;
-    background: color-mod(var(--pri) b(80%));
-    bottom: 0;
-  }
 }

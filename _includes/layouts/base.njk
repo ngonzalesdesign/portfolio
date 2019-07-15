@@ -1,13 +1,10 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+	<html {% if permalink.includes('404')  %} class="invert" {% endif %} {% if section %} data-current="{{ section }}"{% endif %} lang="en">
 
 	{% include "components/head.njk" %}
-    
-	{% if permalink.includes('404')  %}
-	<body class="dark">
-	{% else %}
+
 	<body>
-	{% endif %}
+
 
 		<header>
 
@@ -15,10 +12,8 @@
 			{% include "components/nav.njk" %}
 				{% if permalink.includes('post')  %}
 				<span class="cat-head">Blog</span>
-				<h1>{{title}}</h1>
 				{% elif permalink.includes('projects') %}
 				<span class="cat-head">Work</span>
-				<h1>{{title}}</h1>
 				{% elif navtitle != 'Home' %}
 				<h1 class="cat-head">{{title}}</h1>
 				{% endif %}

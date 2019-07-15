@@ -5,7 +5,7 @@ button {
   color: var(--white);
   background: var(--pri);
   border: none;
-  border-bottom: 3px solid color-mod(var(--pri) b(30%));
+  border-bottom: 3px solid color-mod(var(--pri) b(80%));
 }
 
 input {

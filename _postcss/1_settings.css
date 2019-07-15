@@ -21,10 +21,7 @@
   font-style: normal;
 }
 
-/*----- MEDIA QUERIES ------*/
-@custom-media --small (max-width: 30em);
-@custom-media --med (min-width: 30em);
-@custom-media --large (min-width: 60em);
+@custom-media --tablet (max-width: 30em);
 
 /*----- VARIABLES ----- */
 :root {
@@ -45,4 +42,12 @@
   --small: 5px;
 
   --std: 20px;
+}
+
+@media (--tablet) {
+  .nav {
+    position: fixed;
+    background: color-mod(var(--pri) b(80%));
+    bottom: 0;
+  }
 }

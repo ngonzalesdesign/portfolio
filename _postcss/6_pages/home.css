@@ -1,14 +1,25 @@
 .atf {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 0;
 }
 
-.logo {
+.atf-nav{
+  position: static;
+}
+
+.atf .brand {
+ flex-direction: column;
+}
+
+.atf .logo {
   display: block;
   width: 30vh;
   margin: 0 auto;
+}
+
+.atf-content {
+  align-items: center;
 }
 
 .services {

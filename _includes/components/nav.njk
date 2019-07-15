@@ -1,5 +1,13 @@
-<nav>
-  <ul>
+<nav {% if navtitle == 'Home' %} class="atf atf-nav nav" {% else%} class="nav" {% endif %}>
+			<a href="{{ '/' | url }}" class="brand">
+				<img src="/static/img/logo.svg" alt="logo for natasha gonzales design" class="logo" />
+				{% if navtitle == 'Home' %}
+				<h1 class="site-title title-atf">Natasha <span>Gonzales</span></h1>
+				{% else %}
+				<span class="site-title">Natasha Gonzales</h1>
+				{% endif %}
+			</a>
+  <ul class="menu">
   {%- for nav in collections.nav | sort(attribute="date") -%}
     <li>
       <a href="{{ nav.url | url }}"{% if nav.url == page.url %} data-current="current item"{% endif %}>{{ nav.data.navtitle }}</a>

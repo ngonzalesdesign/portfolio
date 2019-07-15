@@ -7,7 +7,6 @@ body {
   font-size: 1em;
   font-family: var(--mainfont);
   line-height: 1.4;
-  word-wrap: break-word;
 }
 
 body:before {
@@ -31,6 +30,10 @@ body:before {
 
 main {
   padding: 0 var(--std);
+}
+
+section {
+  margin-top: var(--std);
 }
 
 p {

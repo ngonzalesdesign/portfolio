@@ -10,14 +10,7 @@
 	{% endif %}
 
 		<header>
-			<a href="{{ '/' | url }}">
-				<img src="/static/img/logo.svg" alt="logo for natasha gonzales design" class="logo"/>
-				{% if navtitle == 'Home' %}
-				<h1 class="site-title">Natasha <span>Gonzales</span></h1>
-				{% else %}
-				<span class="site-title">Natasha Gonzales</h1>
-				{% endif %}
-			</a>
+
 
 			{% include "components/nav.njk" %}
 				{% if permalink.includes('post')  %}

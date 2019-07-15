@@ -1,7 +1,19 @@
-.site-title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
+  line-height: 2;
+}
+.site-title {
+  display: block;
   color: var(--black);
   @extend %display;
+}
+
+.title-atf {
   font-size: scale(20em, 50em, 3em, 8em, 100vw);
   line-height: 0.8;
   text-align: center;

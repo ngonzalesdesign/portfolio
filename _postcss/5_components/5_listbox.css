@@ -5,7 +5,8 @@
 }
 
 .listbox li {
-  flex: 1;
+  padding-right: 10px;
+  white-space: nowrap;
 }
 
 .listbox li:before {

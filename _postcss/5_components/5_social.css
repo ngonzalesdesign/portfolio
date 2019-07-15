@@ -1,5 +1,13 @@
 .social {
-  display: flex;
+  display: inline-flex;
+  padding: 0 var(--std);
+
+}
+
+.ico svg {
+  fill: var(--pri);
+  width: 16px;
+  padding: 0 var(--small);
 }
 
 .ico a:after {
@@ -9,6 +17,6 @@
   display: none;
 }
 
-.named img {
+.named svg {
   display: none;
 }

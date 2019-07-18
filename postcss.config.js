@@ -4,7 +4,6 @@ module.exports = {
     require("postcss-import"),
     require("precss"),
     require("postcss-extend-rule"),
-    require("postcss-color-mod-function"),
-    require("postcss-scale")
+    require("postcss-color-mod-function")
   ]
 };

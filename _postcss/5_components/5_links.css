@@ -3,17 +3,76 @@ a {
   margin: 0;
   padding: 0;
   color: var(--pri);
+  line-height: 1;
   text-decoration: none;
 }
 
+a:not(.cta):after {
+  display: block;
+  width: 0px;
+  height: 3px;
+  margin: auto;
+  background: transparent;
+  border-bottom: 3px dotted var(--pri);
+  transition: width 0.5s ease, background-color 0.5s ease;
+  content: "";
+}
+
+a:not(.cta, .brand):hover:after,
+a:not(.cta, .brand):focus:after {
+  width: 100%;
+}
+
 .cta {
+  display: inline-block;
   padding: var(--small) var(--std);
   color: var(--pri);
   @extend %lower;
   font-weight: 600;
   text-align: center;
+  vertical-align: middle;
   border: 3px solid var(--pri);
   border-radius: 100px;
+  transform: perspective(1px) translateZ(0);
+}
+
+@keyframes buzz-out-on-hover {
+  10% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+.cta:hover,
+.cta:focus,
+.cta:active {
+  animation: buzz-out-on-hover 1s linear;
 }
 
 .cta-bright {

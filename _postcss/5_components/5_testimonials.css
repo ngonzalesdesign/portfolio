@@ -9,13 +9,13 @@
 .testimonial p:before,
 .testimonial p:after {
   position: relative;
-  top: 10px;
+  top: var(--smallish);
   left: var(--small);
   color: var(--pri);
   @extend %display;
   font-size: 2em;
   line-height: 0;
-  content: "“ ";
+  content: "“";
 }
 
 .testimonial p:after {
@@ -24,11 +24,11 @@
 
 .testimonial cite:before {
   position: relative;
-  top: -4px;
+  top: var(--small);
   display: inline-block;
   width: 30px;
-  height: 3px;
-  margin-right: 10px;
+  height: var(--small);
+  margin-right: var(--smallish);
   background: var(--black);
   content: "";
 }

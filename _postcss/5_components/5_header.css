@@ -6,17 +6,17 @@ header {
 
 .nav {
   display: flex;
-align-items: center;
+  align-items: center;
   padding: 0 var(--std);
 }
 
-@media (--small) {
+@media (--narrow) {
   .fixed {
     position: fixed;
     bottom: 0;
     width: calc(100% - (var(--std)));
-    padding:  10px;
-    background: var(--sec);
+    padding: var(--smallish);
+    background: var(--white);
   }
 
   .fixed .site-title {
@@ -24,11 +24,11 @@ align-items: center;
   }
 
   .fixed a {
-    color: var(--white);
+    color: var(--pri);
   }
 
   .fixed .logo {
-    fill: var(--white);
+    fill: var(--pri);
   }
 }
 
@@ -37,18 +37,23 @@ align-items: center;
 }
 
 .logo {
-  width: 36px;
-  fill: var(--black)
+  width: 40px;
+  fill: var(--black);
 }
 
 .menu {
   display: flex;
   width: 100%;
-  margin-left: 10px;
+
   @extend %display;
 }
 
 .menu li {
   flex: 1;
-
+  text-align: center;
+}
+.menu a {
+  position: relative;
+}
+.menu a[data-current="current item"]::after {
 }

@@ -1,17 +1,13 @@
 html {
   background: var(--white);
-     color: var(--black);
+  color: var(--black);
 }
 
-
-
 body {
-   margin-bottom: calc(4 * var(--std));
- 
+  margin-bottom: calc(4 * var(--std));
   font-size: 1em;
   font-family: var(--mainfont);
   line-height: 1.4;
-
 }
 
 body:before {
@@ -27,8 +23,6 @@ body:before {
   mix-blend-mode: color-burn;
   content: "";
 }
-
-
 
 main {
   padding: 0 var(--std);
@@ -64,4 +58,19 @@ cite {
 .color-bg {
   color: var(--white);
   background: var(--sec);
+}
+
+hr {
+  width: 90%;
+  height: 1.3px;
+
+  margin: 0 auto;
+  background: var(--sec);
+  border: none;
+  opacity: 0.1;
+}
+
+.warn {
+  color: var(--warn);
+  font-size: 1.4rem;
 }

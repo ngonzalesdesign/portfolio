@@ -3,6 +3,10 @@ layout: layouts/base.njk
 section: blog
 permalink: /blog/index.html
 ---
+
+
+{{ layoutContent | safe }}
+
 <aside>
 		<h2>About the Blog</h2>
 		<p>Writings of Natasha Gonzales. Mostly about design & web development, but some stuff on stories, culture, and social issues, too.</p>
@@ -10,9 +14,5 @@ permalink: /blog/index.html
 
 		
 		</aside>
-
-{{ layoutContent | safe }}
-
-
 		
 

@@ -21,14 +21,16 @@
   font-style: normal;
 }
 
-@custom-media --small (max-width: 30em);
+@custom-media --narrow (max-width: 30em);
 
 /*----- VARIABLES ----- */
 :root {
   /* Colors */
   --pri: #aa469b;
   --sec: #7b3470;
-  --ter: #BF4EAE;
+  --ter: #bf4eae;
+
+  --warn: #bf3b4c;
 
   --black: #333;
   --white: #f3efe7;
@@ -40,6 +42,6 @@
 
   /* Sizing */
   --small: 5px;
-
+  --smallish: 10px;
   --std: 20px;
 }

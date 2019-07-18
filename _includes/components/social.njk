@@ -18,13 +18,12 @@ link: 'https://instagram.com/ngonzalesdesign'}
 ] %}
 
 
-<ul class="social {{type}}">
+<ul class="social">
   {% for link in links %}
     <li>
       <a href="{{ link.site }}">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 56.693 56.693"  enable-background="new 0 0 56.693 56.693" xml:space="preserve"><title>Go to Natasha's {{link.name}} feed</title>{{link.icon | safe}}</svg>
-        <span>{{ link.name}}</span>
       </a>
     </li>
   {% endfor %}

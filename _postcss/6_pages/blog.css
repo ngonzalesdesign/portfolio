@@ -1,0 +1,47 @@
+.blog {
+  display: grid;
+  grid-auto-flow: column;
+  width: 100vw;
+  overflow: scroll;
+}
+
+.blog-post {
+  display: grid;
+  grid-column-gap: var(--std);
+  grid-template-columns: auto auto auto;
+  width: 80vw;
+  max-width: 400px;
+}
+
+.blog-post::before {
+  display: block;
+  grid-row: span 4;
+  width: 3px;
+  background: var(--black);
+  content: "";
+}
+
+.blog-title,
+.blog-sum,
+.blog-date,
+.blog-tags {
+  grid-column: span 2;
+}
+
+.blog-date {
+  grid-row: 1;
+  grid-column-start: 2;
+  margin: 0;
+}
+
+.blog-title {
+  @extend %display;
+}
+
+.blog-tags {
+  display: flex;
+}
+
+.blog-tags li {
+  padding-right: var(--std);
+}

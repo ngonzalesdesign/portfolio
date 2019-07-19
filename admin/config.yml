@@ -54,9 +54,12 @@ collections:
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Gallery", name: "gallery", widget: "list", fields: 
-          -{label: Image, name: image, widget: image},
-          -{label: ALt Text, name: alt, widget: string}}
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        fields: 
+          - {label: Image, name: image, widget: image}
+          - {label: Alt Text, name: alt, widget: string}
       - {label: "Summary", name: "summary", widget: "markdown"}
   # pages e.g. About
   - name: "pages"

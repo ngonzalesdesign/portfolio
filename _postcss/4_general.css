@@ -74,3 +74,11 @@ hr {
   color: var(--warn);
   font-size: 1.4rem;
 }
+
+.tags {
+  display: flex;
+}
+
+.tags li {
+  padding-right: var(--std);
+}

@@ -1,0 +1,6 @@
+.scrollfeed {
+  display: grid;
+  grid-auto-flow: column;
+  width: 100vw;
+  overflow: scroll;
+}

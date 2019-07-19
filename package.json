@@ -45,6 +45,7 @@
     "postcss-import-ext-glob": "^1.1.0",
     "postcss-scale": "^1.0.1",
     "precss": "^4.0.0",
+    "simple-lightbox": "^2.1.0",
     "uglify-es": "^3.3.9"
   }
 }

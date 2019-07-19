@@ -8,7 +8,7 @@ backend:
 media_folder: "static/img" # Media files will be stored in the repo under images/uploads
 
 collections:
-  # Our blog posts
+  # blog posts
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
     folder: "posts" # The path to the folder where the documents are stored
@@ -20,8 +20,8 @@ collections:
       - {label: "Summary", name: "summary", widget: "text"}
       - {label: "Tags", name: "tags", widget: "list", default: ["post"]}
       - {label: "Body", name: "body", widget: "markdown"}
-  # Our testimonials
-  - name: "testimonial" # Used in routes, e.g., /admin/collections/blog
+  # testimonials
+  - name: "testimonials" # Used in routes, e.g., /admin/collections/blog
     label: "Testimonial" # Used in the UI
     folder: "x_testimonials" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
@@ -32,7 +32,31 @@ collections:
       - {label: "Site", name: "site", widget: "string"}
       - {label: "Org", name: "org", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  # Our pages e.g. About
+  # case studies
+  - name: "studies" # Used in routes, e.g., /admin/collections/blog
+    label: "Case Study" # Used in the UI
+    folder: "x_studies" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Category", name: "cat", widget: "string"}
+      - {label: "Gallery", name: "gallery", widget: "list", field: {label: Image, name: image, widget: image}}
+      - {label: "Summary", name: "summary", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  # other projects
+  - name: "designs" # Used in routes, e.g., /admin/collections/blog
+    label: "Other Design" # Used in the UI
+    folder: "x_designs" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Gallery", name: "gallery", widget: "list", field: {label: Image, name: image, widget: image}}
+      - {label: "Summary", name: "summary", widget: "markdown"}
+  # pages e.g. About
   - name: "pages"
     label: "Page"
     folder: "pages"

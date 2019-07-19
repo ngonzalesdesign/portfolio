@@ -35,7 +35,7 @@ collections:
   # case studies
   - name: "studies" # Used in routes, e.g., /admin/collections/blog
     label: "Case Study" # Used in the UI
-    folder: "x_studies" # The path to the folder where the documents are stored
+    folder: "studies" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     identifier_field: name
@@ -48,13 +48,16 @@ collections:
   # other projects
   - name: "designs" # Used in routes, e.g., /admin/collections/blog
     label: "Other Design" # Used in the UI
-    folder: "x_designs" # The path to the folder where the documents are stored
+    folder: "designs" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Gallery", name: "gallery", widget: "list", field: {label: Image, name: image, widget: image}}
+      - {label: "Gallery", name: "gallery", widget: "list", 
+         fields: 
+          -{label: Image, name: image, widget: image}
+          -{label: ALt Text, name: alt, widget: string}}
       - {label: "Summary", name: "summary", widget: "markdown"}
   # pages e.g. About
   - name: "pages"

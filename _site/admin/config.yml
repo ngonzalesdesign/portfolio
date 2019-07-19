@@ -38,7 +38,7 @@ collections:
     folder: "studies" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    identifier_field: name
+    identifier_field: title
     fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Category", name: "cat", widget: "string"}
@@ -56,7 +56,7 @@ collections:
     folder: "designs" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    identifier_field: name
+    identifier_field: title
     fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "name", widget: "string"}
       - label: "Gallery"

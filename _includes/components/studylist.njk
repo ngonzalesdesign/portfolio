@@ -3,7 +3,7 @@
 		<article{% if post.url == url %} data-current="current item"{% endif %} class="study-post scroll-post">
 {%for image in post.data.gallery %}
 {% if loop.index0 < 1 %} 
-<img src="{{image}}" alt="alt" />
+<img src="{{image}}" alt="{{image.alt}}" />
 {% endif %}
 {% endfor %}
 			<h3 class="study-title">

@@ -32,10 +32,12 @@ collections:
       - {label: "Site", name: "site", widget: "string"}
       - {label: "Org", name: "org", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-    - { label: "Gallery",
-  name: "galleryImages",
-  widget: "list",
-  field: {label: Image, name: image, widget: image}}
+      - {
+          label: "Gallery",
+          name: "galleryImages",
+          widget: "list",
+          field: {label: Image, name: image, widget: image},
+        }
   # Our pages e.g. About
   - name: "pages"
     label: "Page"

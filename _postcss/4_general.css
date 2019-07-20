@@ -1,6 +1,6 @@
 html {
-  background: var(--white);
   color: var(--black);
+  background: var(--white);
 }
 
 body {
@@ -25,8 +25,8 @@ body:before {
 }
 
 main {
-  padding: 0 var(--std);
   min-height: 80vh;
+  padding: 0 var(--std);
 }
 
 section {
@@ -68,6 +68,10 @@ hr {
   background: var(--sec);
   border: none;
   opacity: 0.1;
+}
+
+img {
+  max-width: 100%;
 }
 
 .warn {

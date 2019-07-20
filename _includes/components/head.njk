@@ -9,6 +9,9 @@
   <style>{{ css | cssmin | safe }}</style>
   {% set js %}
     {% include "assets/js/inline.js" %}
+    {% if permalink.includes('projects') %}
+    {% include "assets/js/simpleLightbox.min.js" %}
+    {% endif %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
 </head>

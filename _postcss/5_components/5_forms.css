@@ -1,4 +1,4 @@
-button {
+.button {
   position: relative;
   z-index: 3;
   display: block;
@@ -14,7 +14,7 @@ button {
   transition: 0.5s ease;
 }
 
-button::before {
+.button::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,7 +26,7 @@ button::before {
   content: "";
 }
 
-button::after {
+.button::after {
   position: absolute;
   top: 0px;
   right: 50%;
@@ -40,13 +40,13 @@ button::after {
   content: "";
 }
 
-button:hover {
+.button:hover {
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.5s ease;
 }
 
-button:hover::after {
+.button:hover::after {
   top: 0;
   right: 0;
   bottom: 0;

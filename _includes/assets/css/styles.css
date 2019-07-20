@@ -827,6 +827,8 @@ a:not(.cta):not(.brand):focus:after {
 }
 .scrollfeed {
   display: grid;
+  grid-auto-columns: -webkit-min-content;
+  grid-auto-columns: min-content;
   grid-auto-flow: column;
   width: 100vw;
   overflow: scroll;
@@ -1009,4 +1011,7 @@ a:not(.cta):not(.brand):focus:after {
   display: grid;
   padding: 20px;
   padding: var(--std);
+}
+.study-post {
+  width: 200px;
 }

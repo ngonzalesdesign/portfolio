@@ -1,8 +1,6 @@
 ---
 title: image
 gallery:
-  - /static/img/logo.svg
-  - /static/img/twitter.svg
+  - alt: tumblr
+    image: /static/img/tumblr.svg
 ---
-
-image

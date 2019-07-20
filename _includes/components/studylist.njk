@@ -1,25 +1,19 @@
 <section class="studies scrollfeed">
 	{% for post in postslist | reverse %}
 		<article{% if post.url == url %} data-current="current item"{% endif %} class="study-post scroll-post">
-{%for i in post.data.gallery %}
-{% if loop.index0 < 1 %} 
-<img src="{{i.image}}" alt="{{i.alt}}" />
-{% endif %}
-{% endfor %}
-			<h3 class="study-title">
-				<a href="{{ post.url | url }}">
-					{% if post.data.title %}
-						{{ post.data.title }}
-					{% else %}
-						Untitled
-					{% endif %}
-				</a>
-			</h3>
+          <img src="{{post.data.gallery[0].image}}" alt="{{post.data.gallery[0].alt}}" />
+          <h3 class="study-title">
+			<a href="{{ post.url | url }}">
+			  {% if post.data.title %}
+			    {{ post.data.title }}
+			  {% else %}
+			    Untitled
+			  {% endif %}
+			</a>
+	       </h3>
 			
-			<p class="blog-date">
-				<time datetime="{{ post.date | machineDate }}">
-					<small>{{ post.date | readableDate }}</small>
-				</time>
+			<p>
+					<small>{{ post.data.category}}</small>
 			</p>
 			
 		</article>

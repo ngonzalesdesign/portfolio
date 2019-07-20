@@ -1,8 +1,8 @@
 ---
-title: trial post
-date: 2019-05-28T01:15:38.128Z
-summary: hi
-tags:
+title: tumblr
+cat: tum
+gallery:
+  - alt: tumblr
+    image: /static/img/magcover.jpg
+summary: tumblr
 ---
-
-hi there

@@ -3,6 +3,6 @@ title: tumblr
 cat: tum
 gallery:
   - alt: tumblr
-    image: /static/img/tumblr.svg
+    image: /static/img/winter.jpg
 summary: tumblr
 ---

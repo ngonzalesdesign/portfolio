@@ -86,3 +86,16 @@ img {
 .tags li {
   padding-right: var(--std);
 }
+
+.gallery {
+  display: grid;
+  grid-gap: var(--smallish);
+  grid-template-columns: 1fr 1fr 1fr;
+  max-height: 800px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

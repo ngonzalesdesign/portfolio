@@ -1,5 +1,8 @@
 ---
-title: This is my first post
-summary: Why contemplating our mortality can be a powerful catalyst for change
-date: 2015-01-01
+title: tumblr
+cat: tum
+gallery:
+  - alt: tumblr
+    image: /static/img/background.png
+summary: tumblr
 ---

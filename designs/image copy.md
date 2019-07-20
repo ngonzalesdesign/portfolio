@@ -1,8 +1,8 @@
 ---
-title: image
+title: tumblr
+cat: tum
 gallery:
-  - /static/img/logo.svg
-  - /static/img/twitter.svg
+  - alt: tumblr
+    image: /static/img/icecream.jpg
+summary: tumblr
 ---
-
-image

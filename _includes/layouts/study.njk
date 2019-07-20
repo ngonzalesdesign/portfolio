@@ -5,11 +5,15 @@ section: post
 
 <article>
   <h2>{{ title }}</h2>
-  <p>
-    <small>
-      <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
-    </small>
-  </p>
+  <section>
+    <div class="gallery gal-project">
+      {% for i in gallery %}
+      <a href="{{i.image}}"><img src="{{i.image}}" alt="{{i.alt}}"/></a>
+      {% endfor %}
+    </div>
+  <h3>In Brief</h3>
+  {{summary}} 
+  </section>
 
   {{ layoutContent | safe }}
 

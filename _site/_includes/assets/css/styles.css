@@ -806,6 +806,9 @@ a:not(.cta):not(.brand):focus:after {
   border-color: #aa469b;
   border-color: var(--pri);
 }
+.gallery a::after {
+  all: unset;
+}
 .listbox ul {
   display: -webkit-box;
   display: flex;
@@ -1011,6 +1014,46 @@ a:not(.cta):not(.brand):focus:after {
   display: grid;
   padding: 20px;
   padding: var(--std);
+}
+.gal-project {
+  display: grid;
+  grid-gap: 10px;
+  grid-gap: var(--smallish);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.gallery img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gal-project a:first-child {
+  grid-row: span 3;
+  grid-column: span 1;
+}
+.gal-project a:nth-child(2) {
+  grid-row: span 4;
+  grid-column: span 2;
+}
+.gal-project a:nth-child(3) {
+  grid-row: span 3;
+  grid-column: span 1;
+}
+.gal-project a:nth-child(4) {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+.gal-project a:nth-child(5) {
+  grid-row: span 3;
+  grid-column: span 1;
+}
+.gal-project a:nth-child(6) {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+.gal-project a:nth-child(7) {
+  grid-row: span 2;
+  grid-column: span 1;
 }
 .study-post {
   width: 200px;

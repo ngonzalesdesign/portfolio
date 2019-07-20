@@ -78,3 +78,7 @@ a:not(.cta, .brand):focus:after {
 .cta-bright {
   border-color: var(--pri);
 }
+
+.gallery a::after {
+  all: unset;
+}

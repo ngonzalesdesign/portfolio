@@ -1,0 +1,46 @@
+.gal-project {
+  display: grid;
+  grid-gap: var(--smallish);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gallery img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gal-project a:first-child {
+  grid-row: span 3;
+  grid-column: span 1;
+}
+
+.gal-project a:nth-child(2) {
+  grid-row: span 4;
+  grid-column: span 2;
+}
+
+.gal-project a:nth-child(3) {
+  grid-row: span 3;
+  grid-column: span 1;
+}
+
+.gal-project a:nth-child(4) {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+
+.gal-project a:nth-child(5) {
+  grid-row: span 3;
+  grid-column: span 1;
+}
+
+.gal-project a:nth-child(6) {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
+.gal-project a:nth-child(7) {
+  grid-row: span 2;
+  grid-column: span 1;
+}

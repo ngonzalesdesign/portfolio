@@ -725,13 +725,12 @@ a:not(.cta):not(.brand):focus:after {
   padding-right: 5px;
   padding-right: var(--small);
   content: "+";
-}.lb-head{text-transform: lowercase}.scrollfeed {
+}.lb-head{text-transform: lowercase}.simplebar-content {
   display: grid;
   grid-auto-columns: -webkit-min-content;
   grid-auto-columns: min-content;
   grid-auto-flow: column;
   width: 100vw;
-  overflow: scroll;
 }.social {
   display: -webkit-inline-box;
   display: inline-flex;
@@ -779,6 +778,163 @@ a:not(.cta):not(.brand):focus:after {
 }.testimonial a {
   display: block;
   font-weight: normal;
+}[data-simplebar] {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  align-content: flex-start;
+  -webkit-box-align: start;
+          align-items: flex-start;
+}.simplebar-wrapper {
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit;
+}.simplebar-mask {
+  direction: inherit;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: auto !important;
+  height: auto !important;
+  z-index: 0;
+}.simplebar-offset {
+  direction: inherit !important;
+  box-sizing: inherit !important;
+  resize: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}.simplebar-content-wrapper {
+  direction: inherit;
+  box-sizing: border-box !important;
+  position: relative;
+  display: block;
+  height: 100% !important; /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
+  width: auto;
+  visibility: visible;
+  overflow: auto; /* Scroll on this element otherwise element can't have a padding applied properly */
+  max-width: 100%; /* Not required for horizontal scroll to trigger */
+  max-height: 100%; /* Needed for vertical scroll to trigger */
+}.simplebar-content:before,
+.simplebar-content:after {
+  content: " ";
+  display: table;
+}.simplebar-placeholder {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  pointer-events: none;
+}.simplebar-height-auto-observer-wrapper {
+  box-sizing: inherit !important;
+  height: 100%;
+  width: 100%;
+  max-width: 1px;
+  position: relative;
+  float: left;
+  max-height: 1px;
+  overflow: hidden;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  -webkit-box-flex: inherit;
+          flex-grow: inherit;
+  flex-shrink: 0;
+  flex-basis: 0;
+}.simplebar-height-auto-observer {
+  box-sizing: inherit;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1000%;
+  width: 1000%;
+  min-height: 1px;
+  min-width: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}.simplebar-track {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}[data-simplebar].simplebar-dragging .simplebar-track {
+  pointer-events: all;
+}.simplebar-scrollbar {
+  position: absolute;
+  right: 2px;
+  width: 7px;
+  min-height: 10px;
+}.simplebar-scrollbar:before {
+  position: absolute;
+  content: "";
+  background: #bf4eae;
+  background: var(--ter);
+  border-radius: 7px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}.simplebar-track .simplebar-scrollbar.simplebar-visible:before {
+  /* When hovered, remove all transitions from drag handle */
+  opacity: 0.3;
+  -webkit-transition: opacity 0s linear;
+  transition: opacity 0s linear;
+}.simplebar-track.simplebar-vertical {
+  top: 0;
+  width: 11px;
+}.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 2px;
+  bottom: 2px;
+}.simplebar-track.simplebar-horizontal {
+  left: 0;
+  height: 11px;
+}.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  height: 100%;
+  left: 2px;
+  right: 2px;
+}.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  right: auto;
+  left: 0;
+  top: 2px;
+  height: 7px;
+  min-height: 0;
+  min-width: 10px;
+  width: auto;
+}
+/* Rtl support */[data-simplebar-direction="rtl"] .simplebar-track.simplebar-vertical {
+  right: auto;
+  left: 0;
+}.hs-dummy-scrollbar-size {
+  direction: rtl;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  height: 500px;
+  width: 500px;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }.invert {
   color: #f3efe7;
   color: var(--white);
@@ -812,6 +968,8 @@ a:not(.cta):not(.brand):focus:after {
   grid-template-columns: auto auto auto;
   width: 80vw;
   max-width: 400px;
+  margin-bottom: calc(2 * 20px);
+  margin-bottom: calc(2 * var(--std));
 }.blog-post::before {
   display: block;
   grid-row: span 4;
@@ -890,6 +1048,36 @@ a:not(.cta):not(.brand):focus:after {
 }.gal-project a:nth-child(7) {
   grid-row: span 2;
   grid-column: span 1;
+}.slbOverlay {
+  background: rgb(22, 9, 20);
+  background: rgb(22, 9, 20);
+  opacity: 0.8;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}.slbImageWrap {
+  max-width: 80%;
+  margin: 0 auto;
+}.slbArrow {
+  opacity: 1;
+}.slbArrow:before,
+.slbCloseBtn {
+  color: #bf4eae;
+  color: var(--ter);
+  text-indent: 0;
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}.next::before {
+  content: "\01F872";
+}.prev::before {
+  content: "\01F870";
+}.slbArrow:hover,
+.slbCloseBtn:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }.study-post {
   width: 200px;
 }.gal-feed {

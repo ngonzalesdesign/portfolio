@@ -32,3 +32,39 @@
   grid-row: span 2;
   grid-column: span 1;
 }
+
+.slbOverlay {
+  background: color-mod(var(--sec) shade(82%));
+  opacity: 0.8;
+  backdrop-filter: blur(20px);
+}
+.slbImageWrap {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.slbArrow {
+  opacity: 1;
+}
+
+.slbArrow:before,
+.slbCloseBtn {
+  color: var(--ter);
+  text-indent: 0;
+  border: none;
+  transition: 0.5s;
+}
+
+.next::before {
+  content: "\01F872";
+}
+
+.prev::before {
+  content: "\01F870";
+}
+
+.slbArrow:hover,
+.slbCloseBtn:hover {
+  transform: scale(1.4);
+  opacity: 1;
+  transition: 0.2s;
+}

@@ -1,4 +1,4 @@
-<section class="blog scrollfeed">
+<section data-simplebar class="blog scrollfeed">
 	{% for post in postslist | reverse %}
 		<article{% if post.url == url %} data-current="current item"{% endif %} class="blog-post scroll-post">
 			<h3 class="blog-title">

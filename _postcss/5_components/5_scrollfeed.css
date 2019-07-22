@@ -1,7 +1,6 @@
-.scrollfeed {
+.simplebar-content {
   display: grid;
   grid-auto-columns: min-content;
   grid-auto-flow: column;
   width: 100vw;
-  overflow: scroll;
 }

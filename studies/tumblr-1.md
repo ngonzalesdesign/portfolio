@@ -1,5 +1,5 @@
 ---
-name: tumblr
+title: tumblr
 cat: tum
 gallery:
   - alt: tumblr
@@ -8,4 +8,3 @@ gallery:
     image: /static/img/logo.svg
 summary: tumblr
 ---
-

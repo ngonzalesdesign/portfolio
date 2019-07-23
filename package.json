@@ -39,6 +39,7 @@
   "dependencies": {
     "clean-css": "^4.2.1",
     "concat-glob-cli": "^0.1.0",
+    "formee": "^1.0.0",
     "html-minifier": "^4.0.0",
     "postcss": "^7.0.17",
     "postcss-color-function": "^4.1.0",

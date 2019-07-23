@@ -12,7 +12,10 @@
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
       {% if permalink.includes('projects') %}
-    <script src="assets/js/simpleLightbox.min.js"></script>
+    <script src="/_includes/assets/js/simpleLightbox.min.js"></script>
+    {% endif %}
+          {% if permalink.includes('contact') %}
+    <script src="/_includes/assets/js/form.js" defer></script>
     {% endif %}
     <script src="/_includes/assets/js/bundle.js"></script>
 </head>

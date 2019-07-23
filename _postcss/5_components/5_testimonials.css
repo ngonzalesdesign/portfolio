@@ -10,7 +10,7 @@
 .testimonial p:after {
   position: relative;
   top: var(--smallish);
-  left: var(--small);
+  padding-right: var(--small);
   color: var(--pri);
   @extend %display;
   font-size: 2em;
@@ -19,6 +19,7 @@
 }
 
 .testimonial p:after {
+  padding-left: var(--small);
   content: "”";
 }
 

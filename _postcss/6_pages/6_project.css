@@ -39,11 +39,12 @@
   backdrop-filter: blur(20px);
 }
 .slbImageWrap {
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
 }
 .slbArrow {
   opacity: 1;
+    transition: 0.2s;
 }
 
 .slbArrow:before,
@@ -51,10 +52,11 @@
   color: var(--ter);
   text-indent: 0;
   border: none;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .next::before {
+  right: var(--smallish);
   content: "\01F872";
 }
 

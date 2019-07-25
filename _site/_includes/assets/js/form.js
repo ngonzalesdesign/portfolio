@@ -1,9 +1,15 @@
-let testForm = document.querySelector("#contact");
+const form = document.querySelector("#contact");
+const success = document.querySelector(".success");
+const reset = document.querySelector("#reset");
 
-testForm.addEventListener("submit", e => {
+function animate() {
+  form.classList.add("slide-out");
+}
+
+form.addEventListener("submit", e => {
   e.preventDefault();
-  const formData = new FormData(testForm);
-  fetch(testForm.getAttribute("action"), {
+  const formData = new FormData(form);
+  fetch(form.getAttribute("action"), {
     method: "POST",
     headers: {
       Accept: "application/x-www-form-urlencoded;charset=UTF-8",
@@ -12,7 +18,20 @@ testForm.addEventListener("submit", e => {
     body: new URLSearchParams(formData).toString()
   }).then(res => {
     if (res) {
-      return alert("Success!");
+      animate();
+      setTimeout(function() {
+        form.classList.add("hidden");
+        success.classList.remove("hidden");
+      }, 300);
     }
   });
+});
+
+reset.addEventListener("click", function() {
+  form.reset();
+  success.classList = "success, slide-out";
+  setTimeout(function() {
+    success.classList = "success, hidden";
+    form.classList = "slide-in";
+  }, 300);
 });

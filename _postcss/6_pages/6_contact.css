@@ -1,11 +1,11 @@
-.contact {
+.contactWrapper {
+  max-width: 100vw;
+  overflow: hidden;
   display: grid;
   justify-items: center;
 }
 
-.contact form {
-  display: grid;
-  justify-items: center;
+.contactWrapper form {
   width: 260px;
 }
 
@@ -15,4 +15,23 @@
   width: 260px;
   margin: 0 auto;
   text-align: center;
+}
+
+@media (--wide) {
+  .contactWrapper form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: left;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .contactWrapper h3 {
+    grid-row: span 2;
+  }
+
+  .button {
+    margin-top: 0;
+  }
 }

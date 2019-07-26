@@ -22,7 +22,8 @@
 }
 
 @custom-media --narrow (max-width: 35em);
-@custom-media --wide (min-width: 35em);
+@custom-media --mid (min-width: 35em);
+@custom-media --wide (min-width: 52em);
 
 /*----- VARIABLES ----- */
 :root {

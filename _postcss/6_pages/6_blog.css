@@ -2,6 +2,7 @@
   display: grid;
   grid-column-gap: var(--std);
   grid-template-columns: auto auto auto;
+  justify-content: left;
   width: 80vw;
   max-width: 400px;
   margin-bottom: calc(2 * var(--std));
@@ -30,4 +31,21 @@
 
 .blog-title {
   @extend %display;
+}
+
+@media (--wide) {
+  .blog {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: "side article";
+    grid-column-gap: calc(3 * var(--std));
+  }
+
+  .blog-post {
+    max-width: 100%;
+  }
+
+  .about {
+    grid-area: side;
+  }
 }

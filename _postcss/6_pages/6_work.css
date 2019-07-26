@@ -9,6 +9,8 @@
 
 .gal-feed {
   grid-template-rows: repeat(13, 1fr);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .gal-feed a:first-child {

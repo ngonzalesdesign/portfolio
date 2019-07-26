@@ -4,3 +4,10 @@
   grid-auto-flow: column;
   width: 100vw;
 }
+
+@media (--wide) {
+  .simplebar-content {
+    display: block;
+    width: auto;
+  }
+}

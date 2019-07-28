@@ -21,16 +21,17 @@
   font-style: normal;
 }
 
+/*----- MEDIA QUERIES -----*/
 @custom-media --narrow (max-width: 35em);
 @custom-media --mid (min-width: 35em);
 @custom-media --wide (min-width: 52em);
 
-/*----- VARIABLES ----- */
+/*----- VARIABLES -----*/
 :root {
   /* Colors */
   --pri: #aa469b;
   --sec: #7b3470;
-  --ter: #bf4eae;
+  --ter: #f7d042;
 
   --warn: #bf3b4c;
 

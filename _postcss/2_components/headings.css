@@ -8,40 +8,34 @@ h6 {
   line-height: 2;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: fluid(20rem, 50rem, 2.027rem, 3.815rem, 100vw);
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: fluid(20rem, 50rem, 1.802rem, 3.025rem, 100vw);
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: fluid(20rem, 50rem, 1.602rem, 2.441rem, 100vw);
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: fluid(20rem, 50rem, 1.424rem, 1.953rem, 100vw);
 }
 
-h5, .h5 {
-font-size: fluid(20rem, 50rem, 1.266rem, 1.563rem, 100vw);
+h5,
+.h5 {
+  font-size: fluid(20rem, 50rem, 1.266rem, 1.563rem, 100vw);
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: fluid(20rem, 50rem, 1.125rem, 1.25rem, 100vw);
-}
-.site-title {
-  margin-bottom: var(--std);
-  color: var(--black);
-  @extend %display;
-}
-
-.title-atf {
-  bottom: 0;
-  font-size: fluid(20rem, 50rem, 3.75rem, 6rem, 100vw);
-  line-height: 0.8;
-  text-align: center;
 }
 
 .cat-head {

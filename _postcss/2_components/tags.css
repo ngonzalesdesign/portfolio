@@ -1,0 +1,7 @@
+.tags {
+  display: flex;
+}
+
+.tags li {
+  padding-right: var(--std);
+}

@@ -1,0 +1,63 @@
+header {
+  display: none;
+}
+
+.atf {
+  display: grid;
+  align-content: center;
+  max-width: 600px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 10vw;
+  color: var(--white);
+  background: url("/static/img/blobs/atf.svg") no-repeat center;
+  background-size: 200vw;
+}
+
+.atf-nav {
+  display: grid;
+  grid-column-gap: var(--smallish);
+  grid-template-areas:
+    "logo menu"
+    "name name";
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.atf-nav a {
+  margin-bottom: var(--std);
+  color: var(--white);
+  background: none;
+}
+
+.atf p {
+  justify-self: right;
+  max-width: 400px;
+}
+
+@media (--mid) {
+  .atf {
+    padding: 0 15vw;
+    background-size: 160vw;
+  }
+}
+
+@media (--wide) {
+  .atf {
+    padding: 0 20vw;
+    background-size: 120vh;
+  }
+
+  .site-title {
+    font-size: 7rem;
+  }
+
+  .atf p {
+    margin-top: var(--std);
+  }
+}
+
+.services {
+  display: grid;
+  padding: var(--std);
+}

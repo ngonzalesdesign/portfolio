@@ -32,6 +32,6 @@ reset.addEventListener("click", function() {
   success.classList = "success, slide-out";
   setTimeout(function() {
     success.classList = "success, hidden";
-    form.classList = "slide-in";
+    form.classList = "slide-in contact";
   }, 300);
 });

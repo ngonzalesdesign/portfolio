@@ -1,37 +1,69 @@
-a {
+body a {
   display: inline-block;
   margin: 0;
   padding: 0;
   color: var(--pri);
   line-height: 1;
   text-decoration: none;
+  background: radial-gradient(
+    circle closest-side,
+    var(--pri) calc(100% - 0.5px),
+    transparent 100%
+  );
+  background-repeat: repeat-x;
+  background-size: 15px 4px;
+  background-position: 0 bottom;
+  transition: 0.3s;
 }
 
-a:not(.cta):after {
+a:hover,
+a:focus {
+  animation: border-dance 4s infinite;
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: 300px bottom;
+  }
+}
+
+.menu a,
+.tags a {
+  background: none;
+}
+
+.menu a:after,
+.tags a:after {
   display: block;
   width: 0px;
   height: 3px;
   margin: auto;
   background: transparent;
-  border-bottom: 3px dotted var(--pri);
+  border-bottom: 3px dotted var(--white);
   transition: width 0.5s ease, background-color 0.5s ease;
   content: "";
 }
 
-a:not(.cta, .brand):hover:after,
-a:not(.cta, .brand):focus:after {
+.menu a:hover:after,
+.tags a:hover:after,
+.menu a:focus:after,
+.tags a:focus:after {
   width: 100%;
 }
 
 .cta {
   display: inline-block;
-  padding: var(--small) var(--std);
-  color: var(--pri);
+  margin: 0 auto;
+  padding: var(--smallish) var(--std);
+  color: var(--sec);
   @extend %lower;
   font-weight: 600;
   text-align: center;
   vertical-align: middle;
-  border: 3px solid var(--pri);
+  background: var(--ter);
   border-radius: 100px;
   transform: perspective(1px) translateZ(0);
 }
@@ -73,10 +105,6 @@ a:not(.cta, .brand):focus:after {
 .cta:focus,
 .cta:active {
   animation: buzz-out-on-hover 1s linear;
-}
-
-.cta-bright {
-  border-color: var(--pri);
 }
 
 .gallery a::after {

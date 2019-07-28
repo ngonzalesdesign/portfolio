@@ -4,8 +4,9 @@
   "description": "Portfolio site and blog for designer/developer Natasha Gonzales",
   "scripts": {
     "css": "postcss _includes/assets/css/input.css -o _includes/assets/css/styles.css -w",
-    "build": "npx eleventy",
-    "postbuild": "npx eleventy --serve",
+    "js": "concat-cli -f _buildjs/*.js -o _includes/assets/js/bundle.js",
+    "prebuild": "npm run js",
+    "build": "npx eleventy --serve",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
   },
@@ -28,8 +29,13 @@
     "luxon": "^1.12.1",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2",
+    "postcss": "^7.0.17",
+    "postcss-color-function": "^4.1.0",
     "postcss-color-mod-function": "^3.0.3",
     "postcss-extend-rule": "^2.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-import-ext-glob": "^1.1.0",
+    "precss": "^4.0.0",
     "stylelint": "^10.1.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^2.2.0",
@@ -39,14 +45,8 @@
   "dependencies": {
     "clean-css": "^4.2.1",
     "concat-glob-cli": "^0.1.0",
-    "formee": "^1.0.0",
     "html-minifier": "^4.0.0",
-    "postcss": "^7.0.17",
-    "postcss-color-function": "^4.1.0",
-    "postcss-import": "^12.0.1",
-    "postcss-import-ext-glob": "^1.1.0",
     "postcss-scale": "^1.0.1",
-    "precss": "^4.0.0",
     "simple-lightbox": "^2.1.0",
     "uglify-es": "^3.3.9"
   }

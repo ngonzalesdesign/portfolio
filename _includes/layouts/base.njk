@@ -19,7 +19,7 @@
 				{% endif %}
 		</header>
 
-		<main {% if permalink.includes('post') or permalink.includes('blog') %} class="blog" {% endif %}>
+		<main id="skip-target" {% if permalink.includes('post') or permalink.includes('blog') %} class="blog" {% endif %}>
 			{{ layoutContent | safe }}
 		</main>
 	

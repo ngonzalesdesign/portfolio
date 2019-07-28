@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /x_testimonials
+Disallow: /admin

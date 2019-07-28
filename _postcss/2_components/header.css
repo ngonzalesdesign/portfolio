@@ -1,0 +1,62 @@
+header {
+  display: flex;
+  justify-items: center;
+  margin-top: var(--std);
+}
+
+.logo svg {
+  width: 36px;
+  fill: var(--white);
+}
+
+.brand {
+  grid-area: name;
+}
+
+.menu {
+  display: flex;
+  grid-area: menu;
+  width: 100%;
+  max-width: 300px;
+  @extend %display;
+}
+
+.menu li {
+  flex: 1;
+  text-align: center;
+}
+.menu a {
+  position: relative;
+}
+
+.site-title {
+  bottom: 0;
+  margin-bottom: var(--std);
+  color: var(--white);
+  @extend %display;
+  font-size: fluid(20rem, 40rem, 3.75rem, 6rem, 100vw);
+  line-height: 0.8;
+  text-align: center;
+}
+
+@media (--narrow) {
+  .fixed {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - (var(--std)));
+    padding: var(--smallish);
+    background: var(--white);
+  }
+
+  .fixed .site-title {
+    display: none;
+  }
+
+  .fixed a {
+    color: var(--pri);
+  }
+
+  .fixed .logo {
+    fill: var(--pri);
+  }
+}

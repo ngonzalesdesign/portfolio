@@ -1,13 +1,14 @@
-<nav {% if navtitle == 'Home' %} class="atf atf-nav nav" {% else%} class="nav fixed" {% endif %}>
+<nav {% if navtitle == 'Home' %} class="nav atf-nav" {% else%} class="nav fixed" {% endif %}>
+			<a href="{{ '/' | url }}" class="logo">{% include "../components/logo.njk" %}</a>
+			{% if navtitle == 'Home' %}
 			<a href="{{ '/' | url }}" class="brand">
-				{% include "../components/logo.njk" %}
-				{% if navtitle == 'Home' %}
-				<h1 class="site-title title-atf">Natasha <span>Gonzales</span></h1>
+        <h1 class="site-title title-atf">Natasha <span>Gonzales</span></h1>
 				{% else %}
 				<span class="site-title">Natasha Gonzales</h1>
 				{% endif %}
 			</a>
   <ul class="menu">
+  <li id="skip-link" class="skip"><a href="#skip-target">Skip to main content</a></li>
   {%- for nav in collections.nav | sort(attribute="date") -%}
     <li>
       <a href="{{ nav.url | url }}"{% if nav.url == page.url %} data-current="current item"{% endif %}>{{ nav.data.navtitle }}</a>

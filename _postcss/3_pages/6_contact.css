@@ -1,13 +1,18 @@
 .contactWrapper {
   display: grid;
+  align-items: start;
   justify-items: center;
-  max-width: 100vw;
+  height: 100%;
   overflow: hidden;
-  background: url("/static/img/blobs/contact.svg");
+  color: var(--white);
+  background: var(--pri);
+  clip-path: url("#contactClip");
 }
 
 .contact {
-  width: 260px;
+  box-sizing: border-box;
+  width: 280px;
+  padding: var(--std);
 }
 
 .follow {
@@ -19,44 +24,108 @@
 }
 
 .contact input {
-  grid-column-start: 1;
-  min-width: 260px;
+  width: 100%;
 }
 
 .contact textarea {
-  grid-row: 1 / 7;
-  grid-column-start: 2;
+  box-sizing: border-box;
   width: 100%;
+  height: 80%;
+  margin-top: 0;
+  padding: 0 var(--smallish);
+  border-left: 3px solid var(--white);
+  resize: none;
 }
 
 .contact label {
   display: block;
-  grid-column-start: 1;
-  justify-self: left;
 }
 
-label[for="message"] {
-  grid-column-start: 2;
-  grid-row-start: 1;
-  align-self: end;
+.success {
+  display: grid;
+  grid-row-gap: 20px;
+  max-width: 300px;
+  text-align: center;
+  justify-items: center;
+}
+
+.success img {
+  max-height: 40vh;
 }
 
 @media (--mid) {
-  .contactWrapper form {
+  .contact {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: left;
-    align-items: center;
-    width: 100%;
+    grid-column-gap: var(--std);
+    grid-template-columns: auto 1fr 1fr;
+    width: auto;
+  }
+
+  .contact h1 {
+    grid-column: 1/4;
+    grid-row-start: 1;
+    justify-self: center;
+  }
+
+  .contact label,
+  .contact input {
+    grid-column-start: 2;
+  }
+
+  label[for="message"],
+  .contact textarea {
+    grid-column-start: 3;
+  }
+
+  label[for="message"] {
+    grid-row-start: 2;
+  }
+
+  .contact textarea {
+    grid-row: 3/6;
+  }
+
+  .contact small {
+    grid-column-start: 2;
+  }
+
+  .contact button {
+    grid-column-start: 3;
+  }
+
+  .success {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr auto 1fr;
     max-width: 600px;
   }
 
-  .contactWrapper h3 {
-    grid-row: span 2;
+  .success img {
+    grid-row: span 3;
   }
 
-  .button {
-    margin-top: 0;
+  .success .button {
+    align-self: start;
+  }
+
+  .success h3 {
+    align-self: end;
+  }
+}
+
+@media (--wide) {
+  .contact h1 {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    align-self: center;
+    max-width: 5%;
+  }
+
+  label[for="message"] {
+    grid-row-start: 1;
+  }
+
+  .contact textarea {
+    grid-row: 2/5;
   }
 }
 

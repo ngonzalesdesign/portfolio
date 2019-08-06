@@ -1,10 +1,10 @@
-<nav {% if navtitle == 'Home' %} class="nav atf-nav" {% else%} class="nav fixed" {% endif %}>
+<nav {% if navtitle == 'Home' %} class="nav atf-nav" {% else%} class="nav" {% endif %}>
 			<a href="{{ '/' | url }}" class="logo">{% include "../components/logo.njk" %}</a>
 			{% if navtitle == 'Home' %}
 			<a href="{{ '/' | url }}" class="brand">
-        <h1 class="site-title title-atf">Natasha <span>Gonzales</span></h1>
+        <h1 class="site-title">Natasha <span>Gonzales</span></h1></a>
 				{% else %}
-				<span class="site-title">Natasha Gonzales</h1>
+				<a href="{{ '/' | url }}" ><span class="site-title">Natasha Gonzales</h1>
 				{% endif %}
 			</a>
   <ul class="menu">

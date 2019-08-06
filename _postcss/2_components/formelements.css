@@ -4,7 +4,7 @@
   display: block;
   min-width: 80%;
   margin: 0 auto;
-  margin-top: var(--std);
+
   padding: var(--smallish);
   overflow: hidden;
   @extend %display;
@@ -55,21 +55,20 @@
   right: 0;
   bottom: 0;
   left: 0;
-
   background: var(--sec);
   opacity: 1;
   transition: 0.5s ease;
 }
 
-input {
-  background: none;
-  border: none;
-  border-bottom: 3px solid var(--black);
-}
-
+input,
 textarea {
   background: none;
   border: none;
+  color: var(--white);
+}
+
+input {
+  border-bottom: 3px solid var(--white);
 }
 
 label {
@@ -78,13 +77,14 @@ label {
 }
 
 .req::after {
-  color: var(--warn);
+  color: var(--ter);
   font-size: 1.2rem;
   vertical-align: super;
   content: "⁎";
 }
 
 ::placeholder {
+  color: var(--white);
   font-weight: 300;
   font-size: 0.8rem;
   vertical-align: center;

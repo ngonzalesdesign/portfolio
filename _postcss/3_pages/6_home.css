@@ -1,11 +1,6 @@
-header {
-  display: none;
-}
-
 .atf {
   display: grid;
   align-content: center;
-  max-width: 600px;
   height: 100vh;
   margin: 0 auto;
   padding: 0 10vw;
@@ -24,39 +19,83 @@ header {
   align-items: center;
 }
 
+.atf .logo svg {
+  fill: var(--white);
+}
+
 .atf-nav a {
-  margin-bottom: var(--std);
   color: var(--white);
   background: none;
 }
 
-.atf p {
-  justify-self: right;
-  max-width: 400px;
+.atf-nav a::after {
+  border-color: var(--white);
 }
 
+.atf p {
+  max-width: 400px;
+  margin-left: 10%;
+}
+
+.brand {
+  grid-area: name;
+}
+
+.atf .site-title {
+  margin-bottom: var(--std);
+  color: var(--white);
+  font-size: fluid(20rem, 40rem, 3.75rem, 6rem, 80vw);
+  line-height: 0.8;
+}
+
+.skills {
+  padding: var(--std);
+  color: var(--white);
+  background: url("/static/img/rocket.svg") no-repeat, var(--pri);
+  background-attachment: fixed;
+  background-size: 300%;
+  background-position: -60vw 5%;
+}
+
+.skills span {
+  position: sticky;
+  @extend %display;
+  top: var(--std);
+}
+
+.skill {
+  height: 100vh;
+  padding-top: calc(2 * var(--std));
+}
+
+.skill::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  float: right;
+  shape-outside: polygon(
+    92.66% 6px,
+    92.24% 79.26%,
+    -17.86% 63.34%,
+    25.9% 46.03%,
+    25.15% 36.87%,
+    69px 16.2%
+  );
+}
 @media (--mid) {
   .atf {
-    padding: 0 15vw;
-    background-size: 160vw;
+    margin: 0;
+    background: var(--pri);
+    clip-path: url("#myClip");
   }
 }
 
 @media (--wide) {
-  .atf {
-    padding: 0 20vw;
-    background-size: 120vh;
-  }
-
-  .site-title {
-    font-size: 7rem;
-  }
-
   .atf p {
-    margin-top: var(--std);
+    max-width: 500px;
+    font-size: 1.2rem;
   }
 }
-
 .services {
   display: grid;
   padding: var(--std);

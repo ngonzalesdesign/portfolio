@@ -5,7 +5,7 @@ html {
 
 body {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   min-height: 100vh;
   font-size: 1em;
   font-family: var(--mainfont);
@@ -21,8 +21,6 @@ body:before {
   background: url(/static/img/bg.svg) repeat-x;
   background-position: bottom right;
   background-size: auto 100vh;
-  filter: brightness(60%) sepia(20%) saturate(1000%) hue-rotate(220deg);
-  mix-blend-mode: color-burn;
   content: "";
 }
 
@@ -70,6 +68,6 @@ img {
 }
 
 .warn {
-  color: var(--warn);
+  color: var(--ter);
   font-size: 1.4rem;
 }

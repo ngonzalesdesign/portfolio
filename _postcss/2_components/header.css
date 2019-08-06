@@ -4,18 +4,32 @@ header {
   margin-top: var(--std);
 }
 
-.logo svg {
-  width: 36px;
-  fill: var(--white);
+.fixed {
+  position: fixed;
 }
 
-.brand {
+.fixed nav {
+  display: flex;
+  padding-left: var(--std);
+}
+
+.logo svg {
+  width: 36px;
+  margin-right: var(--std);
+  fill: var(--pri);
+}
+
+.site-title {
   grid-area: name;
+  color: var(--pri);
+  @extend %display;
+  font-size: 1.4rem;
 }
 
 .menu {
   display: flex;
   grid-area: menu;
+  align-items: center;
   width: 100%;
   max-width: 300px;
   @extend %display;
@@ -27,16 +41,7 @@ header {
 }
 .menu a {
   position: relative;
-}
-
-.site-title {
-  bottom: 0;
-  margin-bottom: var(--std);
-  color: var(--white);
-  @extend %display;
-  font-size: fluid(20rem, 40rem, 3.75rem, 6rem, 100vw);
-  line-height: 0.8;
-  text-align: center;
+  display: inline-block;
 }
 
 @media (--narrow) {

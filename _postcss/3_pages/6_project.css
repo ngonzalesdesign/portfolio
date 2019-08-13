@@ -44,7 +44,7 @@
 }
 .slbArrow {
   opacity: 1;
-    transition: 0.2s;
+  transition: 0.2s;
 }
 
 .slbArrow:before,
@@ -66,7 +66,6 @@
 
 .slbArrow:hover,
 .slbCloseBtn:hover {
-  transform: scale(1.4);
   opacity: 1;
   transition: 0.2s;
 }

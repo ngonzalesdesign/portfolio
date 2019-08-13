@@ -1,5 +1,7 @@
 const scroller = scrollama();
 const scroller2 = scrollama();
+const nav = document.querySelector("header");
+const strengths = document.querySelector(".strengths");
 
 scroller
   .setup({
@@ -7,17 +9,19 @@ scroller
     offset: 1
   })
   .onStepEnter(function(response) {
-    const nav = document.querySelector("header");
     if (response.direction == "down") {
       response.element.classList.add("is-active");
       response.element.scrollIntoView({block: "start", behavior: "smooth"});
     }
 
-    if (response.element.classList.contains("skills")) {
+    if (response.element.classList.contains("first")) {
       nav.classList = "fixed";
     }
-    if (response.element.classList.contains("atf")) {
-      nav.classList = "hidden";
+
+    if (response.element.classList.contains("strength")) {
+      strengths.classList.add("fixedBG");
+    } else {
+      strengths.classList.remove("fixedBG");
     }
   })
   .onStepExit(function(response) {
@@ -40,6 +44,9 @@ scroller2
   .onStepExit(function(response) {
     if (response.direction == "up") {
       response.element.classList.remove("is-active");
+      if (response.element.classList.contains("first")) {
+        nav.classList = "hidden";
+      }
     }
   });
 

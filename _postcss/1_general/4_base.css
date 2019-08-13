@@ -24,10 +24,6 @@ body:before {
   content: "";
 }
 
-main {
-  min-height: 80vh;
-}
-
 section {
   margin-top: var(--std);
 }

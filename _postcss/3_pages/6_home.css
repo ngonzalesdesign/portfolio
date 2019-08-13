@@ -9,7 +9,7 @@
   background-size: 200vw;
 }
 
-.atf-nav {
+.atf nav {
   display: grid;
   grid-column-gap: var(--smallish);
   grid-template-areas:
@@ -17,24 +17,24 @@
     "name name";
   grid-template-columns: auto 1fr;
   align-items: center;
+  text-align: center;
 }
 
 .atf .logo svg {
   fill: var(--white);
 }
 
-.atf-nav a {
+.ondark a:not(.cta) {
   color: var(--white);
-  background: none;
 }
 
-.atf-nav a::after {
+.ondark a::after {
   border-color: var(--white);
 }
 
 .atf p {
   max-width: 400px;
-  margin-left: 10%;
+  margin-left: 5vw;
 }
 
 .brand {
@@ -44,58 +44,159 @@
 .atf .site-title {
   margin-bottom: var(--std);
   color: var(--white);
-  font-size: fluid(20rem, 40rem, 3.75rem, 6rem, 80vw);
+  font-size: scaletext(20rem, 40rem, 3.75rem, 6rem, 80vw);
   line-height: 0.8;
 }
 
-.skills {
+.strengths {
   padding: var(--std);
   color: var(--white);
-  background: url("/static/img/rocket.svg") no-repeat, var(--pri);
+  background: url("/static/img/rocket.svg") no-repeat;
   background-attachment: fixed;
-  background-size: 300%;
-  background-position: -60vw 5%;
+  background-size: 250%;
+  background-position: -30vw 5%;
+  background-origin: content-box;
 }
 
-.skills span {
+.strengths span {
   position: sticky;
-  @extend %display;
-  top: var(--std);
+  top: 35px;
 }
 
-.skill {
-  height: 100vh;
-  padding-top: calc(2 * var(--std));
+.strengths::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: var(--pri);
+  display: block;
+  z-index: -1;
 }
 
-.skill::before {
+.strength {
+  height: calc(100vh + var(--smallish));
+  box-sizing: border-box;
+  padding-top: calc(3 * var(--std));
+}
+
+.strength::before {
   content: "";
   width: 50%;
   height: 100%;
   float: right;
   shape-outside: polygon(
-    92.66% 6px,
-    92.24% 79.26%,
-    -17.86% 63.34%,
-    25.9% 46.03%,
-    25.15% 36.87%,
-    69px 16.2%
+    106.98% -17px,
+    107.12% 88.64%,
+    66.86% 72.96%,
+    88.65% 66.27%,
+    46.81% 62.03%,
+    32.36% 55.82%,
+    20.3% 47.16%,
+    26.81% 34.79%,
+    48.84% 30.63%,
+    46.77% 26.1%,
+    49.29% 17.58%,
+    92px 6.05%
   );
 }
+
 @media (--mid) {
   .atf {
     margin: 0;
+    background: none;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .atf::before {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 100vh;
     background: var(--pri);
+    -webkit-clip-path: url("#myClip");
     clip-path: url("#myClip");
+    position: absolute;
+    z-index: -1;
+    left: 0;
+  }
+
+  .atf-nav {
+    text-align: left;
+  }
+
+  .atf p {
+    margin-left: 0;
+    margin-right: 35%;
+  }
+
+  .strengths {
+    max-width: 1000px;
+    padding: 0 calc(50% - 500px);
+  }
+
+  .strengths::before {
+    position: fixed;
+    width: 120vw;
+    height: 100vh;
+
+    -webkit-clip-path: url("#strClip");
+    clip-path: url("#strClip");
+    top: 0;
+    left: -10vw;
+    opacity: 0;
+  }
+
+  .fixedBG::before {
+    opacity: 1;
+  }
+
+  .strength {
+    padding-top: calc(50vh - 100px);
+    padding-left: var(--std);
+  }
+
+  .strength p {
+    max-width: 500px;
   }
 }
 
 @media (--wide) {
+  .atf {
+    width: 75vw;
+  }
   .atf p {
     max-width: 500px;
+    margin-left: 10%;
+    margin-right: 25%;
     font-size: 1.2rem;
   }
+
+  .strengths {
+    background-size: 2000px;
+    background-position: top 5% right -800px;
+    background-attachment: local;
+  }
+
+  .strength::before {
+    shape-outside: polygon(
+      106.98% -17px,
+      107.12% 88.64%,
+      88.23% 97.01%,
+      60.07% 96.86%,
+      13.51% 97.26%,
+      9.75% 85.57%,
+      8.62% 70.37%,
+      7.92% 51.88%,
+      12.31% 32.74%,
+      16.2% 18.93%,
+      30.4% -3.31%,
+      226px -27.92%
+    );
+  }
 }
+
 .services {
   display: grid;
   padding: var(--std);

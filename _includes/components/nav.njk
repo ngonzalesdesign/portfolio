@@ -1,4 +1,4 @@
-<nav {% if navtitle == 'Home' %} class="nav atf-nav" {% else%} class="nav" {% endif %}>
+<nav {% if navtitle == 'Home' %} class="nav" {% else%} class="nav" {% endif %}>
 			<a href="{{ '/' | url }}" class="logo">{% include "../components/logo.njk" %}</a>
 			{% if navtitle == 'Home' %}
 			<a href="{{ '/' | url }}" class="brand">

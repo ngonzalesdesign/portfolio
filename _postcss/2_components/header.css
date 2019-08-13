@@ -10,13 +10,27 @@ header {
 
 .fixed nav {
   display: flex;
+  width: 100%;
   padding-left: var(--std);
+}
+
+.ondark .site-title {
+  color: var(--white);
+}
+
+.ondark .logo svg {
+  fill: var(--white);
 }
 
 .logo svg {
   width: 36px;
   margin-right: var(--std);
   fill: var(--pri);
+}
+
+.brand {
+  text-align: left;
+  background: none;
 }
 
 .site-title {
@@ -45,8 +59,7 @@ header {
 }
 
 @media (--narrow) {
-  .fixed {
-    position: fixed;
+  header.fixed {
     bottom: 0;
     width: calc(100% - (var(--std)));
     padding: var(--smallish);
@@ -63,5 +76,20 @@ header {
 
   .fixed .logo {
     fill: var(--pri);
+  }
+}
+
+@media (--mid) {
+  .logo svg {
+    width: 42px;
+  }
+
+  .site-title {
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+  }
+
+  .site-title span {
+    margin-left: var(--small);
   }
 }

@@ -1,4 +1,23 @@
-.gal-project a:first-child {
+.project {
+  display: grid;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.project-sum {
+  margin-top: var(--std);
+}
+
+.gal-project {
+  grid-row-start: 1;
+  margin-bottom: var(--std);
+}
+
+.single {
+  grid-row: span 7;
+  grid-column: span 8;
+}
+.gal-project a:not(.single):first-child {
   grid-row: span 3;
   grid-column: span 1;
 }
@@ -68,4 +87,18 @@
 .slbCloseBtn:hover {
   opacity: 1;
   transition: 0.2s;
+}
+
+@media (--wide) {
+  .project {
+    max-width: 1200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 80vh 1fr;
+    grid-gap: calc(2 * var(--std));
+  }
+
+  .gal-project {
+    grid-column-start: 1;
+    grid-row: 1/3;
+  }
 }

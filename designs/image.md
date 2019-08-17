@@ -1,5 +1,5 @@
 ---
-title: tumblr
+title: loneliness
 cat: tum
 gallery:
   - alt: tumblr

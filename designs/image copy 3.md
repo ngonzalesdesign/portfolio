@@ -1,5 +1,5 @@
 ---
-title: tumblr
+title: heroes
 cat: tum
 gallery:
   - alt: tumblr

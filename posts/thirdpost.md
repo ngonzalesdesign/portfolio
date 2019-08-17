@@ -1,6 +1,6 @@
 ---
 title: This is my third post which has a rather long title
-summary: Why contemplating our mortality can be a powerful catalyst for change
+summary: Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
 date: 2017-01-01
 tags:
   - post

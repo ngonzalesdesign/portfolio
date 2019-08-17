@@ -1,5 +1,5 @@
 ---
-title: tumblr
+title: wasp
 cat: tum
 gallery:
   - alt: tumblr

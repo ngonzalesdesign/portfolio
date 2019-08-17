@@ -1,5 +1,5 @@
 ---
-title: tumblr
+title: medicine
 cat: tum
 gallery:
   - alt: tumblr

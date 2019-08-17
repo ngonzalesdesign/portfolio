@@ -28,6 +28,10 @@ section {
   margin-top: var(--std);
 }
 
+article {
+  padding: var(--std);
+}
+
 p {
   max-width: 37em;
   margin-top: 0;
@@ -66,4 +70,14 @@ img {
 .warn {
   color: var(--ter);
   font-size: 1.4rem;
+}
+
+.ondark {
+  color: var(--white);
+}
+
+@media (--mid) {
+  main {
+    margin-top: 100px;
+  }
 }

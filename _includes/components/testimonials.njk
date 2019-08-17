@@ -1,7 +1,7 @@
 {% for testimonial in collections.testimonial %}
   <blockquote class="testimonial">
     <p>{{testimonial.templateContent | safe | striptags(true)}}</p>
-    <cite>{{testimonial.data.name}}
+    <cite>{{testimonial.data.name}}<br>
       <a href="{{testimonial.data.site}}">{{testimonial.data.org}}</a>
     </cite>
 </blockquote>

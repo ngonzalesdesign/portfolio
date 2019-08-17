@@ -1,3 +1,8 @@
+.blog {
+  position: relative;
+  padding: 0 var(--std);
+}
+
 .blog-post {
   display: grid;
   grid-column-gap: var(--std);
@@ -6,14 +11,6 @@
   width: 80vw;
   max-width: 400px;
   margin-bottom: calc(2 * var(--std));
-}
-
-.blog-post::before {
-  display: block;
-  grid-row: span 4;
-  width: 3px;
-  background: var(--black);
-  content: "";
 }
 
 .blog-title,
@@ -25,27 +22,42 @@
 
 .blog-date {
   grid-row: 1;
-  grid-column-start: 2;
+
   margin: 0;
 }
 
 .blog-title {
   @extend %display;
+  line-height: 1.4;
+  padding-bottom: var(--smallish);
+}
+
+.blog-desc {
+  margin-bottom: calc(3 * var(--std));
+}
+
+.blog-desc p {
+  margin-top: var(--small);
 }
 
 @media (--wide) {
   .blog {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-areas: "side article";
-    grid-column-gap: calc(3 * var(--std));
+    margin-left: 5vw;
+    max-width: 1000px;
+  }
+
+  .blog-content {
+    margin-left: 360px;
+    height: 100%;
   }
 
   .blog-post {
     max-width: 100%;
   }
 
-  .about {
-    grid-area: side;
+  .blog-desc {
+    position: fixed;
+    width: 300px;
+    margin-top: 100px;
   }
 }

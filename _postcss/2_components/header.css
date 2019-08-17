@@ -11,7 +11,6 @@ header {
 .fixed nav {
   display: flex;
   width: 100%;
-  padding-left: var(--std);
 }
 
 .ondark .site-title {
@@ -24,7 +23,7 @@ header {
 
 .logo svg {
   width: 36px;
-  margin-right: var(--std);
+
   fill: var(--pri);
 }
 
@@ -45,7 +44,7 @@ header {
   grid-area: menu;
   align-items: center;
   width: 100%;
-  max-width: 300px;
+
   @extend %display;
 }
 
@@ -61,6 +60,7 @@ header {
 @media (--narrow) {
   header.fixed {
     bottom: 0;
+    z-index: 10;
     width: calc(100% - (var(--std)));
     padding: var(--smallish);
     background: var(--white);
@@ -82,6 +82,7 @@ header {
 @media (--mid) {
   .logo svg {
     width: 42px;
+    margin: 0 var(--std);
   }
 
   .site-title {

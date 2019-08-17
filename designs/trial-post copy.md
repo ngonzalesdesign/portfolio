@@ -1,5 +1,5 @@
 ---
-title: tumblr
+title: sugar
 cat: tum
 gallery:
   - alt: tumblr

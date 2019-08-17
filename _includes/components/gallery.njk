@@ -1,6 +1,6 @@
 <section class="gallery gal-feed">
 	{% for post in postslist | reverse %}
-    {% if loop.index0 < 11 %}   
+    {% if loop.index0 < 13 %}   
           <a href="{{ post.url | url }}"><img src="{{post.data.gallery[0].image}}" alt="{{post.data.gallery[0].alt}}" /></a>
           {% endif %}
 	{% endfor %}

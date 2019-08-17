@@ -3,20 +3,23 @@ layout: layouts/base.njk
 section: post
 ---
 
-<article>
-  <h2>{{ title }}</h2>
-  <section>
+<article class="project">
+  <h2 class="display h4">{{ title }}</h2>
+
     <div class="gallery gal-project">
+      {% if gallery.length > 1 %}
       {% for i in gallery %}
       <a href="{{i.image}}"><img src="{{i.image}}" alt="{{i.alt}}"/></a>
       {% endfor %}
+      {% else %} <a href="{{gallery[0].image}}" class="single"><img src="{{gallery[0].image}}" alt="{{gallery[0].alt}}"/></a>
+      {% endif %}
     </div>
-  <h3>In Brief</h3>
+ <div class="project-sum"> <h3 class="h6">In Brief</h3>
   {{summary}} 
-  </section>
-
+</div>
+<section class="project-content">
   {{ layoutContent | safe }}
-
+</section>
   
 
 </article>

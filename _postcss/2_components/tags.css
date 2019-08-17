@@ -1,5 +1,6 @@
 .tags {
   display: flex;
+  margin-top: calc(-1 * var(--smallish));
 }
 
 .tags li {

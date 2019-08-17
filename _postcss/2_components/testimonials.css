@@ -6,12 +6,16 @@
   overflow: hidden;
 }
 
+.testimonial {
+  padding: var(--smallish) var(--std);
+}
+
 .testimonial p:before,
 .testimonial p:after {
   position: relative;
   top: var(--smallish);
   padding-right: var(--small);
-  color: var(--pri);
+  color: var(--ter);
   @extend %display;
   font-size: 2em;
   line-height: 0;
@@ -24,8 +28,8 @@
 }
 
 .testimonial a {
-  display: block;
   font-weight: normal;
+  color: var(--ter);
 }
 
 .testimonial:first-child {

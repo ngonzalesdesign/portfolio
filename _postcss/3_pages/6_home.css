@@ -3,6 +3,7 @@
   align-content: center;
   height: 100vh;
   margin: 0 auto;
+
   padding: 0 10vw;
   color: var(--white);
   background: url("/static/img/blobs/atf.svg") no-repeat center;
@@ -22,6 +23,10 @@
 
 .atf .logo svg {
   fill: var(--white);
+}
+
+.atf .menu {
+  max-width: 300px;
 }
 
 .ondark a:not(.cta) {
@@ -99,9 +104,36 @@
   );
 }
 
+.services {
+  color: var(--sec);
+}
+
+.stories {
+  position: relative;
+  color: var(--white);
+}
+
+.stories::before {
+  background: var(--sec);
+  -webkit-clip-path: url("#testClipSm");
+  clip-path: url("#testClipSm");
+  content: "";
+  width: 100%;
+  height: 150%;
+  margin-top: -60px;
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.stories .display {
+  margin-left: var(--std);
+}
+
 @media (--mid) {
   .atf {
     margin: 0;
+    margin-top: -100px;
     background: none;
     box-sizing: border-box;
     width: 100%;
@@ -160,6 +192,15 @@
   .strength p {
     max-width: 500px;
   }
+
+  .stories {
+    max-width: 600px;
+    padding: 0 calc(50vw - 300px);
+  }
+
+  .stories::before {
+    margin-left: calc(-50vw + 300px);
+  }
 }
 
 @media (--wide) {
@@ -194,6 +235,18 @@
       30.4% -3.31%,
       226px -27.92%
     );
+  }
+
+  .stories {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-auto-flow: column;
+    padding: 0 calc(50vw - 500px);
+  }
+
+  .stories::before {
+    margin-left: calc(-50vw + 400px);
   }
 }
 

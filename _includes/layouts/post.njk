@@ -3,8 +3,8 @@ layout: layouts/blog.njk
 section: post
 ---
 
-<article>
-  <h2 class="display">{{ title }}</h2>
+<article class="blog-content">
+  <h2 class="display h4">{{ title }}</h2>
   <p>
     <small>
       <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
@@ -26,6 +26,3 @@ section: post
 
 </article>
 
-<nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
-</nav>

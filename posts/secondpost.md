@@ -1,11 +1,12 @@
 ---
 title: This is my second post
-summary: Why contemplating our mortality can be a powerful catalyst for change
+summary: Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
 date: 2016-01-01
 tags:
   - post
   - sport
 ---
+
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 
 ## Section Header

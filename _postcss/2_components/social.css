@@ -12,3 +12,7 @@
 .social a:after {
   all: unset;
 }
+
+.ondark .social svg {
+  fill: var(--white);
+}

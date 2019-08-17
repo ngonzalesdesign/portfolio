@@ -49,8 +49,7 @@
 .atf .site-title {
   margin-bottom: var(--std);
   color: var(--white);
-  font-size: scaletext(20rem, 40rem, 3.75rem, 6rem, 80vw);
-  line-height: 0.8;
+  @extend %title;
 }
 
 .strengths {

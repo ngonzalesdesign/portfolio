@@ -1,0 +1,40 @@
+.about {
+  color: var(--sec);
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: end;
+  margin: 0 calc(50vw - 300px);
+}
+
+.about h1 {
+  @extend %title;
+}
+
+.about img {
+  max-height: 600px;
+}
+
+.about section {
+  grid-column: span 2;
+}
+
+@media (--wide) {
+  .about {
+    grid-template-columns: 5% minmax(auto, 600px) 300px;
+    grid-template-rows: auto auto 1fr;
+    align-items: start;
+    margin: 0 10vw;
+  }
+
+  .about h1 {
+    grid-column: span 2;
+  }
+
+  .about img {
+    grid-row: span 2;
+  }
+
+  .about section {
+    grid-column: 2;
+  }
+}

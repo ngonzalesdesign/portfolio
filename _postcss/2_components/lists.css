@@ -1,0 +1,22 @@
+.bullet li {
+  margin-bottom: var(--small);
+}
+
+.bullet li::before {
+  content: "●";
+  margin-right: var(--smallish);
+  color: #ff2f6e;
+}
+
+.double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sublist {
+  grid-row: span var(--items);
+}
+
+.sublist ul {
+  margin-left: var(--std);
+}

@@ -11,6 +11,7 @@
 .gal-project {
   grid-row-start: 1;
   margin-bottom: var(--std);
+  grid-template-rows: repeat(8, auto);
 }
 
 .single {

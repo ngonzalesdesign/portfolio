@@ -1,26 +1,20 @@
 .invert {
   color: var(--white);
-  background: color-mod(var(--sec) lightness(-30%));
+  background: var(--black);
 }
 
-.invert body:before {
- mix-blend-mode: color-dodge;
- filter: brightness(70%) sepia(20%) saturate(700%) hue-rotate(260deg)
+.invert body {
+background: url('/static/img/empty.svg');
 
-}
-
-.invert .cat-head:after {
-    background: var(--white);
 }
 
 
-.cta-bright {
- color: var(--ter);
- border-color: var(--ter);
-}
+
+
 
 .notfound {
     display: flex;
     flex-direction: column;
     align-items: center; 
+    margin-top: 30vh;
 }

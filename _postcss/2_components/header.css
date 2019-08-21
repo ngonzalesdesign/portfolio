@@ -1,16 +1,27 @@
 header {
   display: flex;
   justify-items: center;
-  margin-top: var(--std);
+  position: fixed;
+  background: var(--white);
+  width: 100%;
+  margin:0;
+  padding-top: var(--std);
 }
 
-.fixed {
-  position: fixed;
+header::before {
+
+    content: '';
+    width: 100%;
+    height: 170%;
+    position: absolute;
+    background: var(--white);
+    z-index: -1;
+    clip-path: url('#hdClip');
 }
 
 .fixed nav {
   display: flex;
-  width: 100%;
+  width: auto;
 }
 
 .ondark .site-title {
@@ -23,8 +34,7 @@ header {
 
 .logo svg {
   width: 36px;
-
-  fill: var(--pri);
+  fill: var(--bright);
 }
 
 .brand {
@@ -34,7 +44,7 @@ header {
 
 .site-title {
   grid-area: name;
-  color: var(--pri);
+  color: var(--sec);
   @extend %display;
   font-size: 1.4rem;
 }
@@ -55,6 +65,7 @@ header {
 .menu a {
   position: relative;
   display: inline-block;
+  color: var(--sec);
 }
 
 @media (--narrow) {
@@ -63,23 +74,36 @@ header {
     z-index: 10;
     width: calc(100% - (var(--std)));
     padding: var(--smallish);
-    background: var(--white);
+
   }
 
   .fixed .site-title {
     display: none;
   }
 
+  .fixed .nav {
+    width: 100%;
+  }
+
   .fixed a {
     color: var(--pri);
   }
 
-  .fixed .logo {
-    fill: var(--pri);
-  }
+
 }
 
 @media (--mid) {
+
+  header::before {
+
+    content: '';
+    width: 100%;
+    height: 170%;
+    position: absolute;
+    background: var(--white);
+    z-index: -1;
+    clip-path: url('#hdClip');
+}
   .logo svg {
     width: 42px;
     margin: 0 var(--std);

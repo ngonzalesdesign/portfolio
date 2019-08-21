@@ -24,16 +24,18 @@
 /*----- MEDIA QUERIES -----*/
 @custom-media --narrow (max-width: 35em);
 @custom-media --mid (min-width: 35em);
-@custom-media --wide (min-width: 52em);
+@custom-media --wide (min-width: 50em);
 
 /*----- VARIABLES -----*/
 :root {
   /* Colors */
   --pri: #aa469b;
   --sec: #7b3470;
-  --ter: #f7d042;
+  --ter: #f1c215;
 
-  --black: #333;
+--bright: #e21164;
+
+  --black: #261525;
   --white: #f3efe7;
 
   /* Font Stacks */

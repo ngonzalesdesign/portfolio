@@ -137,7 +137,7 @@
 
 .simplebar-track .simplebar-scrollbar.simplebar-visible:before {
   /* When hovered, remove all transitions from drag handle */
-  opacity: 0.3;
+  opacity: 1;
   transition: opacity 0s linear;
 }
 
@@ -187,4 +187,10 @@
   width: 500px;
   overflow-y: hidden;
   overflow-x: scroll;
+}
+
+@media (--wide) {
+  .simplebar-track .simplebar-scrollbar.simplebar-visible:before{
+    opacity: 0;
+  }
 }

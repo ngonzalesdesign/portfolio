@@ -13,6 +13,10 @@ body {
 }
 
 
+main {
+  margin-top: 50px;
+}
+
 
 section {
   margin-top: var(--std);
@@ -58,7 +62,7 @@ img {
 }
 
 .warn {
-  color: var(--ter);
+  color: var(--bright);
   font-size: 1.4rem;
 }
 

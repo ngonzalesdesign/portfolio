@@ -3,17 +3,20 @@
   justify-items: center;
   align-items: center;
   height: 100vh;
-  margin-top: -100px;
+
   padding: 0 var(--std);
+      margin-top: -100px;
+    padding-bottom: 50px;
+
   color: var(--pri);
-  background: url('/static/img/subtlebg.svg');
+  background: url('/static/img/starsbg.svg'), var(--black);
   background-size: 1200px;
   background-position: 40% 80%;
 }
 
 .atf nav {
   display: grid;
-  width: 50vw;
+  width: 300px;
   grid-column-gap: var(--smallish);
   grid-template-areas:
     "logo menu"
@@ -23,23 +26,23 @@
   text-align: center;
 }
 
+
+
   .atf .nav::before {
     clip-path: url("#atfClip");
     content: "";
     display: block;
     width: 100vw;
     height: 100vw;
-    background: var(--pri);  
+    background: var(--white);  
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     left: calc(-1 * var(--small));
     transform: rotate(90deg);
   }
 
 
-.atf .logo svg {
-  fill: var(--white);
-}
+
 
 .atf .menu {
   max-width: 300px;
@@ -56,7 +59,7 @@
 .atf p {
   max-width: 400px;
   margin-top: var(--small);
-  background: var(--white);
+  background: var(--black);
 }
 
 .brand {
@@ -64,20 +67,21 @@
 }
 
 .atf .site-title {
+  text-align: center;
   margin-bottom: var(--std);
-  color: var(--white);
+  color: var(--pri);
   @extend %title;
 }
 
 .intro {
-  color: var(--pri);
+  color: var(--white);
   padding: var(--std);
   margin-top: var(--std);
+  align-self: start;
 }
 
 .intro h2 {
-  color: var(--bright);
-  background: var(--white);
+  background: var(--black);
   display: inline;
 }
 
@@ -121,20 +125,7 @@ background-position: 40% -90%;
   float: right;
   height: 100%;
   width: 50%;
-  shape-outside: polygon(
-    106.98% -17px,
-    107.12% 88.64%,
-    66.86% 72.96%,
-    88.65% 66.27%,
-    46.81% 62.03%,
-    32.36% 55.82%,
-    20.3% 47.16%,
-    26.81% 34.79%,
-    48.84% 30.63%,
-    46.77% 26.1%,
-    49.29% 17.58%,
-    92px 6.05%,
-  );
+  shape-outside: polygon(106.98% -17px, 107.12% 88.64%, 20.56% 92.16%, 28.6% 73.86%, 45.22% 61.82%, 42.41% 43.58%, 40.94% 26.28%, 44.54% 12.21%, 51.49% -5.24%, 60% -18.2%, 74.42% -32.21%);
   content: "";
 }
 
@@ -153,15 +144,15 @@ background-position: 40% -90%;
 .stories {
   position: relative;
   color: var(--white);
-  padding-top: 120px;
+  padding-top: var(--std);
 }
 
 .stories::before {
   background: var(--sec);
-  clip-path: url("#testClipSm");
   content: "";
   width: 100%;
-  height: 130%;
+  height: calc(130% + var(--std));
+  margin-top: calc(-1 * var(--std));
   display: block;
   position: absolute;
   z-index: -1;
@@ -173,6 +164,20 @@ background-position: 40% -90%;
 }
 
 @media (--mid) {
+
+  .atf {
+
+  padding: 0 var(--std);
+
+  }
+
+  .atf .nav{
+    width: 50vw;
+  }
+
+  .intro {
+    align-self: center;
+  }
 
   .strengths {
     max-width: 1000px;
@@ -204,20 +209,14 @@ background-position: 40% -90%;
   .strength p {
     max-width: 500px;
   }
+    .stories::before {
+    height: 125%;
 
-
-
-
-  .stories {
-    max-width: 600px;
-    padding: 0 calc(50vw - 300px);
-        padding-top: 120px;
   }
 
-  .stories::before {
-    clip-path: url("#testClip");
-    margin-left: calc(-50vw + 300px);
-  }
+
+
+
 }
 
 @media (--wide) {
@@ -281,6 +280,7 @@ width: 75vw;
   .stories {
     max-width: 1000px;
     display: grid;
+
     grid-template-columns: min-content auto;
     grid-auto-flow: column;
     padding: 0 calc(50vw - 500px);
@@ -288,6 +288,12 @@ width: 75vw;
   }
 
   .stories::before {
+    clip-path: url("#testClip");
     margin-left: 0;
+
   }
+
+
+
+
 }

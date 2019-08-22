@@ -6,6 +6,7 @@ header {
   width: 100%;
   margin:0;
   padding-top: var(--std);
+  z-index: 3;
 }
 
 header::before {
@@ -19,9 +20,17 @@ header::before {
     clip-path: url('#hdClip');
 }
 
+nav > * {
+  z-index: 1;
+}
+
 .fixed nav {
   display: flex;
   width: auto;
+}
+
+.fixed .logo {
+  margin: 0 var(--std);
 }
 
 .ondark .site-title {
@@ -31,6 +40,12 @@ header::before {
 .ondark .logo svg {
   fill: var(--white);
 }
+
+.logo {
+  background: none;
+}
+
+
 
 .logo svg {
   width: 36px;
@@ -106,7 +121,7 @@ header::before {
 }
   .logo svg {
     width: 42px;
-    margin: 0 var(--std);
+    
   }
 
   .site-title {

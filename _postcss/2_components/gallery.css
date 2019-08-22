@@ -1,6 +1,6 @@
 .gallery {
   display: grid;
-  grid-gap: var(--smallish);
+  grid-gap: 1vw;
   grid-template-columns: 1fr 1fr 1fr;
 }
 

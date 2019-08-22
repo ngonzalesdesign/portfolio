@@ -64,11 +64,11 @@ input,
 textarea {
   background: none;
   border: none;
-  color: var(--white);
+  color: var(--black);
 }
 
 input {
-  border-bottom: 3px solid var(--white);
+  border-bottom: 3px solid var(--pri);
 }
 
 label {
@@ -77,14 +77,14 @@ label {
 }
 
 .req::after {
-  color: var(--ter);
+  color: var(--bright);
   font-size: 1.2rem;
   vertical-align: super;
   content: "⁎";
 }
 
 ::placeholder {
-  color: var(--white);
+  color: var(--pri);
   font-weight: 300;
   font-size: 0.8rem;
   vertical-align: center;

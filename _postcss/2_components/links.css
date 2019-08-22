@@ -1,6 +1,7 @@
 body a {
   margin: 0;
   padding: 0;
+  padding-bottom: var(--small);
   color: var(--pri);
   line-height: 1;
   text-decoration: none;
@@ -11,12 +12,17 @@ main a {
   color: var(--black);
   background: radial-gradient(
     circle closest-side,
-    var(--pri) calc(100% - 0.5px),
+    var(--black) calc(100% - 0.5px),
     transparent 100%
   );
   background-repeat: repeat-x;
   background-size: 8px 4px;
   background-position: 0 bottom;
+}
+
+.bright {
+  color: var(--bright);
+  float: left;
 }
 
 a:hover,
@@ -34,18 +40,20 @@ a:focus {
 }
 
 .menu a,
-.tags a {
+.tags a,
+.bright {
   background: none;
 }
 
 .menu a:after,
-.tags a:after {
+.tags a:after,
+.bright::after {
   display: block;
   width: 0px;
   height: 3px;
   margin: auto;
   background: transparent;
-  border-bottom: 3px dotted var(--pri);
+  border-bottom: 3px dotted;
   transition: width 0.5s ease, background-color 0.5s ease;
   content: "";
 }
@@ -53,7 +61,9 @@ a:focus {
 .menu a:hover:after,
 .tags a:hover:after,
 .menu a:focus:after,
-.tags a:focus:after {
+.tags a:focus:after,
+.bright:focus::after,
+.bright:hover::after {
   width: 100%;
 }
 

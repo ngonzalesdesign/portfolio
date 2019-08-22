@@ -5,11 +5,11 @@
   height: 100vh;
 
   padding: 0 var(--std);
-      margin-top: -100px;
-    padding-bottom: 50px;
+  margin-top: -100px;
+  padding-bottom: 50px;
 
   color: var(--pri);
-  background: url('/static/img/starsbg.svg'), var(--black);
+  background: url("/static/img/starsbg.svg"), var(--black);
   background-size: 1200px;
   background-position: 40% 80%;
 }
@@ -26,23 +26,18 @@
   text-align: center;
 }
 
-
-
-  .atf .nav::before {
-    clip-path: url("#atfClip");
-    content: "";
-    display: block;
-    width: 100vw;
-    height: 100vw;
-    background: var(--white);  
-    position: absolute;
-    z-index: 0;
-    left: calc(-1 * var(--small));
-    transform: rotate(90deg);
-  }
-
-
-
+.atf .nav::before {
+  clip-path: url("#atfClip");
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 100vw;
+  background: var(--white);
+  position: absolute;
+  z-index: 0;
+  left: calc(-1 * var(--small));
+  transform: rotate(90deg);
+}
 
 .atf .menu {
   max-width: 300px;
@@ -105,14 +100,14 @@
   display: block;
   width: 100%;
   height: 100%;
-background: url('/static/img/bg.svg'), var(--black);
-    content: "";
-    position: fixed;
-left: 0;
+  background: url("/static/img/bg.svg"), var(--black);
+  content: "";
+  position: fixed;
+  left: 0;
 
-background-size: 100vw;
+  background-size: 100vw;
 
-background-position: 40% -90%;
+  background-position: 40% -90%;
 }
 
 .strength {
@@ -125,14 +120,26 @@ background-position: 40% -90%;
   float: right;
   height: 100%;
   width: 50%;
-  shape-outside: polygon(106.98% -17px, 107.12% 88.64%, 20.56% 92.16%, 28.6% 73.86%, 45.22% 61.82%, 42.41% 43.58%, 40.94% 26.28%, 44.54% 12.21%, 51.49% -5.24%, 60% -18.2%, 74.42% -32.21%);
+  shape-outside: polygon(
+    106.98% -17px,
+    107.12% 88.64%,
+    20.56% 92.16%,
+    28.6% 73.86%,
+    45.22% 61.82%,
+    42.41% 43.58%,
+    40.94% 26.28%,
+    44.54% 12.21%,
+    51.49% -5.24%,
+    60% -18.2%,
+    74.42% -32.21%
+  );
   content: "";
 }
 
 .capacity {
   display: grid;
   grid-gap: var(--std);
- 
+
   padding: var(--std);
   padding-top: 100px;
   margin: 0 auto;
@@ -148,7 +155,7 @@ background-position: 40% -90%;
 }
 
 .stories::before {
-  background: var(--sec);
+  background: var(--black);
   content: "";
   width: 100%;
   height: calc(130% + var(--std));
@@ -156,7 +163,6 @@ background-position: 40% -90%;
   display: block;
   position: absolute;
   z-index: -1;
-  
 }
 
 .stories .display {
@@ -164,14 +170,11 @@ background-position: 40% -90%;
 }
 
 @media (--mid) {
-
   .atf {
-
-  padding: 0 var(--std);
-
+    padding: 0 var(--std);
   }
 
-  .atf .nav{
+  .atf .nav {
     width: 50vw;
   }
 
@@ -182,7 +185,6 @@ background-position: 40% -90%;
   .strengths {
     max-width: 1000px;
     padding: 0 calc(50% - 500px);
-
   }
 
   .strengths::before {
@@ -209,18 +211,12 @@ background-position: 40% -90%;
   .strength p {
     max-width: 500px;
   }
-    .stories::before {
+  .stories::before {
     height: 125%;
-
   }
-
-
-
-
 }
 
 @media (--wide) {
-
   .atf {
     grid-template-columns: 1fr 1fr;
     padding-left: 5%;
@@ -230,7 +226,6 @@ background-position: 40% -90%;
     grid-gap: 100px;
     align-items: center;
     justify-items: center;
-
   }
 
   .atf .nav {
@@ -239,11 +234,11 @@ background-position: 40% -90%;
   }
 
   .atf .nav::before {
-width: 75vw;
+    width: 75vw;
     height: 100vh;
     transform: rotate(0deg);
   }
-  
+
   .strengths {
     background-size: 2000px;
     background-position: top 5% right -800px;
@@ -267,10 +262,10 @@ width: 75vw;
     );
   }
 
-    .capacity {
-     grid-column-gap: 60px;
-  grid-template-columns: 1fr 1fr;
-  max-width: 1000px;
+  .capacity {
+    grid-column-gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
   }
 
   .skills {
@@ -280,7 +275,7 @@ width: 75vw;
   .stories {
     max-width: 1000px;
     display: grid;
-
+    grid-column-gap: var(--std);
     grid-template-columns: min-content auto;
     grid-auto-flow: column;
     padding: 0 calc(50vw - 500px);
@@ -290,10 +285,5 @@ width: 75vw;
   .stories::before {
     clip-path: url("#testClip");
     margin-left: 0;
-
   }
-
-
-
-
 }

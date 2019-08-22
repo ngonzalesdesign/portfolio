@@ -1,13 +1,13 @@
 <form id="contact" class="contact" name="contact" method="POST" action="/#contact" netlify="true">
   <h1 class="display">Let's Talk</h1>
   <label class="req">Name</label>
-  <input type="text" name="name" id="name" autocomplete="name" placeholder="full name" title="Please enter your name" required>
+  <input type="text" name="name" id="name" autocomplete="name" placeholder="full name" title="Please enter your name" >
   <label for="email" class="req">Email</label>
-  <input type="email" name="email" id="email" autocomplete="email" placeholder="email address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+  <input type="email" name="email" id="email" autocomplete="email" placeholder="email address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" >
   <label for="message" class="req">Message</label>
-  <textarea name="message" id="message" placeholder="write your message here" rows="7" required></textarea>
+  <textarea name="message" id="message" placeholder="write your message here" rows="7" ></textarea>
   <small>All items marked with an asterisk (<span class="warn">&#8270;</span>) are required.</small>
   <button type="submit" name="submit" class="button">Send Message</button>
 </form>
 
-<div class="slide-in success hidden"><img src="/static/img/ufo.svg" alt="ufo beaming a piece of mail up"/><h3 class="display">Thank you</h3><p>Your message has been sent. I will get back to you as soon as I can. </p><button id="reset" class="button">Reset Form</button></div>
+<div class="slide-in success hidden">{% include "../components/ufo.njk" %}<h3 class="display">Thank you</h3><p>Your message has been sent. I will get back to you as soon as I can. </p><button id="reset" class="button">Reset Form</button></div>

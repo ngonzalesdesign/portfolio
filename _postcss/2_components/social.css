@@ -6,7 +6,7 @@
 .social svg {
   width: 16px;
   padding: 0 var(--small);
-  fill: var(--pri);
+  fill: var(--black);
 }
 
 .social a:after {

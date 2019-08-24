@@ -5,7 +5,7 @@
   height: 100vh;
 
   padding: 0 var(--std);
-  margin-top: -100px;
+  margin-top: -15vh;
   padding-bottom: 50px;
 
   color: var(--pri);
@@ -88,6 +88,8 @@
   background-attachment: fixed;
   background-position: -30vw 5%;
   background-origin: content-box;
+  position: relative;
+  transition: .8s ease;
 }
 
 .strengths span {
@@ -109,6 +111,8 @@
 
   background-position: 40% -90%;
 }
+
+
 
 .strength {
   box-sizing: border-box;
@@ -158,7 +162,7 @@
   background: var(--black);
   content: "";
   width: 100%;
-  height: calc(130% + var(--std));
+  height: 130%;
   margin-top: calc(-1 * var(--std));
   display: block;
   position: absolute;
@@ -172,6 +176,7 @@
 @media (--mid) {
   .atf {
     padding: 0 var(--std);
+    height: calc(100vh + 20px);
   }
 
   .atf .nav {
@@ -198,6 +203,23 @@
     left: -10vw;
     opacity: 0;
   }
+
+  .strengths::after {
+
+    content: '';
+    width: 100%;
+    height: 400px;
+    background: url('/static/img/cloud.svg');
+    position: absolute;
+    bottom: calc(-15% + 10vw);
+    left:0;
+    background-position: -300px;
+
+    background-size: 110vw;
+    background-position: -5vw 0;
+    z-index: -1;
+
+}
 
   .fixedBG::before {
     opacity: 1;
@@ -241,8 +263,6 @@
 
   .strengths {
     background-size: 2000px;
-    background-position: top 5% right -800px;
-    background-attachment: local;
   }
 
   .strength::before {
@@ -260,6 +280,22 @@
       30.4% -3.31%,
       226px -27.92%
     );
+  }
+
+  .step-one {
+    background-position: top 0 right -800px;
+  }
+
+  .step-two {
+        background-position: top 25% right -800px;
+  }
+
+  .step-three {
+        background-position: top 50% right -800px;
+  }
+
+  .step-four {
+        background-position: top 75% right -800px;
   }
 
   .capacity {

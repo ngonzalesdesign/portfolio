@@ -1050,8 +1050,8 @@ body a {
   transition: 0.3s;
 }
 main a {
-  color: #261525;
-  color: var(--black);
+  color: #aa469b;
+  color: var(--pri);
   background: radial-gradient(
     circle closest-side,
     #261525 calc(100% - 0.5px),
@@ -1066,17 +1066,26 @@ main a {
   background-size: 8px 4px;
   background-position: 0 bottom;
 }
+p a {
+  background-position: left 0 bottom 4px;
+  background-size: 8px 3px;
+}
+p a:hover,
+p a:focus {
+  -webkit-animation: border-dance-sm 8s infinite;
+          animation: border-dance-sm 8s infinite;
+}
 .bright {
-  color: #e21164;
-  color: var(--bright);
+  color: #f1c215;
+  color: var(--ter);
   float: left;
 }
 a:hover,
 a:focus {
-  -webkit-animation: border-dance 8s infinite;
-          animation: border-dance 8s infinite;
+  -webkit-animation: border-dance-lg 8s infinite;
+          animation: border-dance-lg 8s infinite;
 }
-@-webkit-keyframes border-dance {
+@-webkit-keyframes border-dance-lg {
   0% {
     background-position: 0 bottom;
   }
@@ -1084,12 +1093,28 @@ a:focus {
     background-position: 300px bottom;
   }
 }
-@keyframes border-dance {
+@keyframes border-dance-lg {
   0% {
     background-position: 0 bottom;
   }
   100% {
     background-position: 300px bottom;
+  }
+}
+@-webkit-keyframes border-dance-sm {
+    0% {
+    background-position: left 0 bottom 4px;
+  }
+  100% {
+    background-position: left 300px bottom 4px;
+  }
+}
+@keyframes border-dance-sm {
+    0% {
+    background-position: left 0 bottom 4px;
+  }
+  100% {
+    background-position: left 300px bottom 4px;
   }
 }
 .menu a,
@@ -1783,7 +1808,8 @@ background: url('/static/img/empty.svg');
   display: grid;
   align-items: start;
   justify-items: center;
-  height: 100%;
+  align-items: center;
+
   overflow: hidden;
   color: #aa469b;
   color: var(--pri);
@@ -1819,24 +1845,14 @@ background: url('/static/img/empty.svg');
   justify-items: center;
 }
 .mail {
-    transform: scale(.6) translateX(140%) translateY(170%);
-    -webkit-animation: beam-up 2s infinite;
-            animation: beam-up 2s infinite;
+  transform: scale(0.6) translateX(140%) translateY(170%);
+  -webkit-animation: beam-up 1.5s linear infinite;
+          animation: beam-up 1.5s linear infinite;
+  transform-origin: center;
 }
 @media (min-width: 35em) {
-  .contactWrapper::after {
-    content: "";
-    width: 100vw;
-    height: 20vh;
-    display: block;
-    background: #e21164;
-    background: #e21164;
-    background: var(--bright);
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-    -webkit-clip-path: url("#contactClip");
-    clip-path: url("#contactClip");
+  .contactWrapper {
+    height: 85%;
   }
   .contact {
     display: grid;
@@ -1885,8 +1901,8 @@ background: url('/static/img/empty.svg');
 
   .ufo {
     grid-row: span 3;
-width: 25vw;
-max-height: 400px;
+    width: 25vw;
+    max-height: 400px;
   }
 
   .success .button {
@@ -1898,9 +1914,6 @@ max-height: 400px;
   }
 }
 @media (min-width: 50em) {
-  .contactWrapper::after {
-    height: 30vh;
-  }
   .contact {
     grid-column-gap: calc(2 * 20px);
     grid-column-gap: calc(2 * var(--std));
@@ -2014,22 +2027,40 @@ max-height: 400px;
   }
 }
 @-webkit-keyframes beam-up {
- 0% {
-   transform: scale(.6) translateX(140%) translateY(170%);
- }
+  0% {
+    transform: scale(0.3) translateX(210%) translateY(440%);
+  }
+  33% {
+    transform: scale(0.3) translateX(210%) translateY(330%) rotate(3deg);
+  }
 
- 100% {
-   transform: scale(.6) translateX(140%) translateY(20%);
- }
+  52% {
+    transform: scale(0.3) translateX(210%) translateY(210%) rotate(0deg);
+  }
+  75% {
+    transform: scale(0.3) translateX(210%) translateY(80%) rotate(-3deg);
+  }
+  100% {
+    transform: scale(0.3) translateX(210%) translateY(80%);
+  }
 }
 @keyframes beam-up {
- 0% {
-   transform: scale(.6) translateX(140%) translateY(170%);
- }
+  0% {
+    transform: scale(0.3) translateX(210%) translateY(440%);
+  }
+  33% {
+    transform: scale(0.3) translateX(210%) translateY(330%) rotate(3deg);
+  }
 
- 100% {
-   transform: scale(.6) translateX(140%) translateY(20%);
- }
+  52% {
+    transform: scale(0.3) translateX(210%) translateY(210%) rotate(0deg);
+  }
+  75% {
+    transform: scale(0.3) translateX(210%) translateY(80%) rotate(-3deg);
+  }
+  100% {
+    transform: scale(0.3) translateX(210%) translateY(80%);
+  }
 }
 .atf {
   display: grid;
@@ -2040,7 +2071,7 @@ max-height: 400px;
   padding: 0 20px;
 
   padding: 0 var(--std);
-  margin-top: -100px;
+  margin-top: -15vh;
   padding-bottom: 50px;
 
   color: #aa469b;
@@ -2132,6 +2163,8 @@ max-height: 400px;
   background-attachment: fixed;
   background-position: -30vw 5%;
   background-origin: content-box;
+  position: relative;
+  transition: .8s ease;
 }
 .strengths span {
   position: -webkit-sticky;
@@ -2206,8 +2239,7 @@ max-height: 400px;
   background: var(--black);
   content: "";
   width: 100%;
-  height: calc(130% + 20px);
-  height: calc(130% + var(--std));
+  height: 130%;
   margin-top: calc(-1 * 20px);
   margin-top: calc(-1 * var(--std));
   display: block;
@@ -2222,6 +2254,7 @@ max-height: 400px;
   .atf {
     padding: 0 20px;
     padding: 0 var(--std);
+    height: calc(100vh + 20px);
   }
 
   .atf .nav {
@@ -2249,6 +2282,23 @@ max-height: 400px;
     left: -10vw;
     opacity: 0;
   }
+
+  .strengths::after {
+
+    content: '';
+    width: 100%;
+    height: 400px;
+    background: url('/static/img/cloud.svg');
+    position: absolute;
+    bottom: calc(-15% + 10vw);
+    left:0;
+    background-position: -300px;
+
+    background-size: 110vw;
+    background-position: -5vw 0;
+    z-index: -1;
+
+}
 
   .fixedBG::before {
     opacity: 1;
@@ -2292,8 +2342,6 @@ max-height: 400px;
 
   .strengths {
     background-size: 2000px;
-    background-position: top 5% right -800px;
-    background-attachment: local;
   }
 
   .strength::before {
@@ -2311,6 +2359,22 @@ max-height: 400px;
       30.4% -3.31%,
       226px -27.92%
     );
+  }
+
+  .step-one {
+    background-position: top 0 right -800px;
+  }
+
+  .step-two {
+        background-position: top 25% right -800px;
+  }
+
+  .step-three {
+        background-position: top 50% right -800px;
+  }
+
+  .step-four {
+        background-position: top 75% right -800px;
   }
 
   .capacity {

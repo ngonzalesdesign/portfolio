@@ -9,7 +9,7 @@ body a {
 }
 
 main a {
-  color: var(--black);
+  color: var(--pri);
   background: radial-gradient(
     circle closest-side,
     var(--black) calc(100% - 0.5px),
@@ -20,22 +20,41 @@ main a {
   background-position: 0 bottom;
 }
 
+p a {
+  background-position: left 0 bottom 4px;
+  background-size: 8px 3px;
+}
+
+p a:hover,
+p a:focus {
+  animation: border-dance-sm 8s infinite;
+}
+
 .bright {
-  color: var(--bright);
+  color: var(--ter);
   float: left;
 }
 
 a:hover,
 a:focus {
-  animation: border-dance 8s infinite;
+  animation: border-dance-lg 8s infinite;
 }
 
-@keyframes border-dance {
+@keyframes border-dance-lg {
   0% {
     background-position: 0 bottom;
   }
   100% {
     background-position: 300px bottom;
+  }
+}
+
+@keyframes border-dance-sm {
+    0% {
+    background-position: left 0 bottom 4px;
+  }
+  100% {
+    background-position: left 300px bottom 4px;
   }
 }
 

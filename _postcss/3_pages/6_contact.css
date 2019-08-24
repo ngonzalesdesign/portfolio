@@ -2,7 +2,8 @@
   display: grid;
   align-items: start;
   justify-items: center;
-  height: 100%;
+  align-items: center;
+
   overflow: hidden;
   color: var(--pri);
 }
@@ -40,23 +41,14 @@
 }
 
 .mail {
-    transform: scale(.6) translateX(140%) translateY(170%);
-    animation: beam-up 2s infinite;
+  transform: scale(0.6) translateX(140%) translateY(170%);
+  animation: beam-up 1.5s linear infinite;
+  transform-origin: center;
 }
 
 @media (--mid) {
-  .contactWrapper::after {
-    content: "";
-    width: 100vw;
-    height: 20vh;
-    display: block;
-    background: #e21164;
-    background: var(--bright);
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-    -webkit-clip-path: url("#contactClip");
-    clip-path: url("#contactClip");
+  .contactWrapper {
+    height: 85%;
   }
   .contact {
     display: grid;
@@ -103,8 +95,8 @@
 
   .ufo {
     grid-row: span 3;
-width: 25vw;
-max-height: 400px;
+    width: 25vw;
+    max-height: 400px;
   }
 
   .success .button {
@@ -117,9 +109,6 @@ max-height: 400px;
 }
 
 @media (--wide) {
-  .contactWrapper::after {
-    height: 30vh;
-  }
   .contact {
     grid-column-gap: calc(2 * var(--std));
     grid-template-columns: 1fr 2fr 2fr;
@@ -235,11 +224,20 @@ max-height: 400px;
 }
 
 @keyframes beam-up {
- 0% {
-   transform: scale(.6) translateX(140%) translateY(170%);
- }
+  0% {
+    transform: scale(0.3) translateX(210%) translateY(440%);
+  }
+  33% {
+    transform: scale(0.3) translateX(210%) translateY(330%) rotate(3deg);
+  }
 
- 100% {
-   transform: scale(.6) translateX(140%) translateY(20%);
- }
+  52% {
+    transform: scale(0.3) translateX(210%) translateY(210%) rotate(0deg);
+  }
+  75% {
+    transform: scale(0.3) translateX(210%) translateY(80%) rotate(-3deg);
+  }
+  100% {
+    transform: scale(0.3) translateX(210%) translateY(80%);
+  }
 }

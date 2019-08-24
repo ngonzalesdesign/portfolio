@@ -1,6 +1,8 @@
 .gallery {
+  display: -ms-grid;
   display: grid;
   grid-gap: 1vw;
+  -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
 }
 

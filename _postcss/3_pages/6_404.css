@@ -4,17 +4,12 @@
 }
 
 .invert body {
-background: url('/static/img/empty.svg');
-
+  background: url("/static/img/empty.svg");
 }
 
-
-
-
-
 .notfound {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    margin-top: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30vh;
 }

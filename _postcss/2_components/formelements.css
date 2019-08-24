@@ -4,7 +4,6 @@
   display: block;
   min-width: 80%;
   margin: 0 auto;
-
   padding: var(--smallish);
   overflow: hidden;
   @extend %display;
@@ -62,9 +61,9 @@
 
 input,
 textarea {
+  color: var(--black);
   background: none;
   border: none;
-  color: var(--black);
 }
 
 input {

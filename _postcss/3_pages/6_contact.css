@@ -1,9 +1,8 @@
 .contactWrapper {
   display: grid;
   align-items: start;
-  justify-items: center;
   align-items: center;
-
+  justify-items: center;
   overflow: hidden;
   color: var(--pri);
 }

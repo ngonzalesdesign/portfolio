@@ -1,4 +1,5 @@
 .simplebar-content {
+  display: -ms-grid;
   display: grid;
   grid-auto-columns: min-content;
   grid-auto-flow: column;

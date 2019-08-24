@@ -1,8 +1,8 @@
 .testimonials {
+  display: -ms-grid;
   display: grid;
   grid-auto-columns: 100%;
   grid-auto-flow: column;
-
   width: 100%;
   overflow: hidden;
 }

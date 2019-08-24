@@ -1,23 +1,22 @@
 header {
+  position: fixed;
+  z-index: 3;
   display: flex;
   justify-items: center;
-  position: fixed;
-  background: var(--white);
   width: 100%;
-  margin:0;
+  margin: 0;
   padding-top: var(--std);
-  z-index: 3;
+  background: var(--white);
 }
 
 header::before {
-
-    content: '';
-    width: 100%;
-    height: 170%;
-    position: absolute;
-    background: var(--white);
-    z-index: -1;
-    clip-path: url('#hdClip');
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 170%;
+  background: var(--white);
+  content: "";
+  clip-path: url("#hdClip");
 }
 
 nav > * {
@@ -45,8 +44,6 @@ nav > * {
   background: none;
 }
 
-
-
 .logo svg {
   width: 36px;
   fill: var(--bright);
@@ -69,7 +66,6 @@ nav > * {
   grid-area: menu;
   align-items: center;
   width: 100%;
-
   @extend %display;
 }
 
@@ -89,7 +85,6 @@ nav > * {
     z-index: 10;
     width: calc(100% - (var(--std)));
     padding: var(--smallish);
-
   }
 
   .fixed .site-title {
@@ -103,30 +98,25 @@ nav > * {
   .fixed a {
     color: var(--pri);
   }
-
-
 }
 
 @media (--mid) {
-
   header::before {
-
-    content: '';
+    position: absolute;
+    z-index: -1;
     width: 100%;
     height: 170%;
-    position: absolute;
     background: var(--white);
-    z-index: -1;
-    clip-path: url('#hdClip');
-}
+    content: "";
+    clip-path: url("#hdClip");
+  }
   .logo svg {
     width: 42px;
-    
   }
 
   .site-title {
-    letter-spacing: 1px;
     font-size: 1.6rem;
+    letter-spacing: 1px;
   }
 
   .site-title span {

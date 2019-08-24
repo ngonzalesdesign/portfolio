@@ -4,7 +4,9 @@ html {
 }
 
 body {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr auto;
   grid-template-rows: 1fr auto;
   min-height: 100vh;
   font-size: 1em;
@@ -12,11 +14,9 @@ body {
   line-height: 1.4;
 }
 
-
 main {
   margin-top: 50px;
 }
-
 
 section {
   margin-top: var(--std);

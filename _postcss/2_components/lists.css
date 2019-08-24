@@ -3,17 +3,20 @@
 }
 
 .bullet li::before {
-  content: "●";
   margin-right: var(--smallish);
   color: #ff2f6e;
+  content: "●";
 }
 
 .double {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
 
 .sublist {
+  -ms-grid-row-span: var(--items);
   grid-row: span var(--items);
 }
 

@@ -4,8 +4,10 @@
 }
 
 .blog-post {
+  display: -ms-grid;
   display: grid;
   grid-column-gap: var(--std);
+  -ms-grid-columns: auto auto auto;
   grid-template-columns: auto auto auto;
   justify-content: left;
   width: 80vw;
@@ -17,19 +19,20 @@
 .blog-sum,
 .blog-date,
 .blog-tags {
+  -ms-grid-column-span: 2;
   grid-column: span 2;
 }
 
 .blog-date {
+  -ms-grid-row: 1;
   grid-row: 1;
-
   margin: 0;
 }
 
 .blog-title {
+  padding-bottom: var(--smallish);
   @extend %display;
   line-height: 1.4;
-  padding-bottom: var(--smallish);
 }
 
 .blog-desc {
@@ -42,13 +45,13 @@
 
 @media (--wide) {
   .blog {
-    margin-left: 5vw;
     max-width: 1000px;
+    margin-left: 5vw;
   }
 
   .blog-content {
-    margin-left: 360px;
     height: 100%;
+    margin-left: 360px;
   }
 
   .blog-post {

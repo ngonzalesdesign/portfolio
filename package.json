@@ -5,7 +5,7 @@
   "scripts": {
     "css": "postcss _includes/assets/css/input.css -o _includes/assets/css/styles.css -w",
     "js": "concat-cli -f _buildjs/*.js -o _includes/assets/js/bundle.js",
-    "prebuild": "npm run js",
+    
     "build": "npx eleventy --serve",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
@@ -47,6 +47,7 @@
     "html-minifier": "^4.0.0",
     "postcss-scale": "^1.0.1",
     "simple-lightbox": "^2.1.0",
+    "throttle-debounce": "^2.1.0",
     "uglify-es": "^3.3.9"
   }
 }

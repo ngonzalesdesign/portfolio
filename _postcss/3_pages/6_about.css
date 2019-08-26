@@ -5,7 +5,7 @@
   grid-template-columns: auto auto;
   -ms-grid-row-align: end;
   align-items: end;
-  margin: 0 calc(50vw - 300px);
+
   color: var(--sec);
 }
 
@@ -20,6 +20,10 @@
 .about section {
   -ms-grid-column-span: 2;
   grid-column: span 2;
+}
+
+@media (--mid) {
+  margin: 0 calc(50vw - 300px);
 }
 
 @media (--wide) {

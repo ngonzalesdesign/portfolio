@@ -22,16 +22,19 @@ form.addEventListener("submit", e => {
       setTimeout(function() {
         form.classList.add("hidden");
         success.classList.remove("hidden");
-      }, 300);
+      }, 500);
     }
   });
 });
 
 reset.addEventListener("click", function() {
   form.reset();
-  success.classList = "success, slide-out";
+  success.classList = "success slide-out";
   setTimeout(function() {
-    success.classList = "success, hidden";
+    success.classList = "success hidden";
     form.classList = "slide-in contact";
-  }, 300);
+  }, 500);
+  setTimeout(function() {
+    form.classList = "contact";
+  }, 500);
 });

@@ -5,24 +5,31 @@ const strengths = document.querySelector(".strengths");
 
 function scrollToTop(response, direction) {
   if (response.direction == direction) {
-  response.element.classList.add("is-active");
-  response.element.scrollIntoView({block: "start", behavior: "smooth"});
+    response.element.classList.add("is-active");
+    response.element.scrollIntoView({block: "start", behavior: "smooth"});
   }
-};
+}
 
-function animatePage(response){
-  var cls = response.element.classList;
-  switch( true ){
-    case cls.contains('one'):
-      strengths.classList = `strengths + step-one`;
-      nav.classList = "fixed";
+function animatePage(response) {
+  const stepNum = response.element.dataset.step;
+  const defaultCls = "strengths";
+  switch (true) {
+    case stepNum === "0":
+      nav.classList = "";
       break;
-    case cls.contains('two'):
-      strengths.classList = `strengths + step-two`
+    case stepNum === "1":
+      function animateBTF() {
+        strengths.classList = `${defaultCls} step-one`;
+        nav.classList = "fixed";
+      }
+      setTimeout(animateBTF, 500);
       break;
-    case cls.contains('three'):
-      strengths.classList = `strengths + step-three`
-      break;      
+    case stepNum === "2":
+      strengths.classList = `${defaultCls} step-two`;
+      break;
+    case stepNum === "3":
+      strengths.classList = `${defaultCls} step-three`;
+      break;
   }
 }
 
@@ -50,7 +57,7 @@ scroller
 scroller2
   .setup({
     step: ".step",
-    offset: 0.1
+    offset: 0.01
   })
   .onStepEnter(function(response) {
     scrollToTop(response, "up");

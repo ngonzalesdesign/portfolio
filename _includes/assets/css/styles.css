@@ -309,7 +309,7 @@
   --sec: #7b3470;
   --ter: #f1c215;
 
---bright: #e21164;
+  --bright: #e21164;
 
   --black: #261525;
   --white: #f3efe7;
@@ -675,6 +675,7 @@ img {
   }
 }
 footer {
+  position: relative;
   display: flex;
   align-content: center;
   justify-content: flex-end;
@@ -841,22 +842,37 @@ header {
   display: flex;
   justify-items: center;
   width: 100%;
+  height: 0;
   margin: 0;
+
+  background: #f3efe7;
+
+  background: var(--white);
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+header.fixed {
+  overflow: visible;
   padding-top: 20px;
   padding-top: var(--std);
-  background: #f3efe7;
-  background: var(--white);
+  height: 50px;
+  transition: 0.5s ease;
 }
 header::before {
   position: absolute;
   z-index: -1;
   width: 100%;
-  height: 170%;
+  height: 0;
   background: #f3efe7;
   background: var(--white);
   content: "";
   -webkit-clip-path: url("#hdClip");
           clip-path: url("#hdClip");
+  transition: 0.5s ease;
+}
+header.fixed::before {
+  height: 170%;
+  transition: 0.5s ease;
 }
 nav > * {
   z-index: 1;
@@ -922,8 +938,9 @@ nav > * {
 @media (max-width: 35em) {
   header.fixed {
     bottom: 0;
-    z-index: 10;
+
     width: calc(100% - (20px));
+
     width: calc(100% - (var(--std)));
     padding: 10px;
     padding: var(--smallish);
@@ -966,6 +983,29 @@ nav > * {
   .site-title span {
     margin-left: 5px;
     margin-left: var(--small);
+  }
+
+  .fixed .site-title {
+    -webkit-animation: slidedown 0.4s ease;
+            animation: slidedown 0.4s ease;
+  }
+}
+@-webkit-keyframes slidedown {
+  0% {
+    margin-top: -100px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+@keyframes slidedown {
+  0% {
+    margin-top: -100px;
+  }
+
+  100% {
+    margin-top: 0;
   }
 }
 h1,
@@ -1706,8 +1746,9 @@ a:focus {
   grid-template-columns: auto auto;
   -ms-grid-row-align: end;
   align-items: end;
-  margin: 0 calc(50vw - 300px);
+
   color: #7b3470;
+
   color: var(--sec);
 }
 .about h1{
@@ -1720,6 +1761,9 @@ a:focus {
 .about section {
   -ms-grid-column-span: 2;
   grid-column: span 2;
+}
+@media (min-width: 35em) {
+  margin: 0 calc(50vw - 300px);
 }
 @media (min-width: 50em) {
   .about {
@@ -1911,8 +1955,8 @@ a:focus {
 
   .ufo {
     grid-row: span 3;
-    width: 25vw;
-    max-height: 400px;
+    height: 25vw;
+    margin-top: calc(-1 * 5vw);
   }
 
   .success .button {
@@ -2081,11 +2125,11 @@ a:focus {
   padding: 0 20px;
 
   padding: 0 var(--std);
-  margin-top: -15vh;
+  margin-top: -13.7vh;
   padding-bottom: 50px;
-
+  position: relative;
+  z-index: 4;
   color: #aa469b;
-
   color: var(--pri);
   background: url("/static/img/starsbg.svg"), #261525;
   background: url("/static/img/starsbg.svg"), var(--black);
@@ -2115,6 +2159,7 @@ a:focus {
   background: var(--white);
   position: absolute;
   z-index: 0;
+  top: -10vh;
   left: calc(-1 * 5px);
   left: calc(-1 * var(--small));
   transform: rotate(90deg);
@@ -2174,7 +2219,7 @@ a:focus {
   background-position: -30vw 5%;
   background-origin: content-box;
   position: relative;
-  transition: .8s ease;
+  transition: 0.8s ease;
 }
 .strengths span {
   position: -webkit-sticky;
@@ -2191,10 +2236,34 @@ a:focus {
   content: "";
   position: fixed;
   left: 0;
-
+  top: 0;
   background-size: 100vw;
-
   background-position: 40% -90%;
+}
+.strengths::after {
+  content: "";
+
+  width: 100%;
+
+  height: 120vh;
+
+  background: url("/static/img/cloud.svg") no-repeat,
+    linear-gradient(transparent 15vw, #f3efe7 10%);
+
+  background: url("/static/img/cloud.svg") no-repeat,
+    linear-gradient(transparent 15vw, var(--white) 10%);
+
+  position: absolute;
+
+  bottom: calc(-35% + 10vw);
+
+  left: 0;
+
+  background-size: 110vw;
+
+  background-position: -5vw 0;
+
+  z-index: 0;
 }
 .strength {
   box-sizing: border-box;
@@ -2230,15 +2299,16 @@ a:focus {
   padding: 20px;
 
   padding: var(--std);
-  padding-top: 100px;
-  margin: 0 auto;
 
+  margin: 0 auto;
+  position: relative;
   max-width: 600px;
   color: #7b3470;
   color: var(--sec);
 }
 .stories {
   position: relative;
+  z-index: 0;
   color: #f3efe7;
   color: var(--white);
   padding-top: 20px;
@@ -2264,11 +2334,14 @@ a:focus {
   .atf {
     padding: 0 20px;
     padding: 0 var(--std);
-    height: calc(100vh + 20px);
   }
 
   .atf .nav {
     width: 50vw;
+  }
+
+  .atf .nav::before {
+    top: -20vh;
   }
 
   .intro {
@@ -2285,36 +2358,12 @@ a:focus {
     width: 120vw;
     height: 100vh;
 
-    -webkit-clip-path: url("#strClip");
-    clip-path: url("#strClip");
-    top: 20px;
-    top: var(--std);
     left: -10vw;
-    opacity: 0;
-  }
-
-  .strengths::after {
-
-    content: '';
-    width: 100%;
-    height: 400px;
-    background: url('/static/img/cloud.svg');
-    position: absolute;
-    bottom: calc(-15% + 10vw);
-    left:0;
-    background-position: -300px;
-
-    background-size: 110vw;
-    background-position: -5vw 0;
-    z-index: -1;
-
-}
-
-  .fixedBG::before {
-    opacity: 1;
   }
 
   .strength {
+    height: calc(100vh + 20px);
+    height: calc(100vh + var(--std));
     padding-top: calc(50vh - 100px);
     padding-left: 20px;
     padding-left: var(--std);
@@ -2322,6 +2371,10 @@ a:focus {
 
   .strength p {
     max-width: 500px;
+  }
+
+  .capacity {
+    padding-top: 100px;
   }
   .stories::before {
     height: 125%;
@@ -2345,6 +2398,7 @@ a:focus {
   }
 
   .atf .nav::before {
+    top: 0;
     width: 75vw;
     height: 100vh;
     transform: rotate(0deg);
@@ -2352,6 +2406,7 @@ a:focus {
 
   .strengths {
     background-size: 2000px;
+    background-position: top -75% right -800px;
   }
 
   .strength::before {
@@ -2376,15 +2431,51 @@ a:focus {
   }
 
   .step-two {
-        background-position: top 25% right -800px;
+    background-position: top 25% right -800px;
   }
 
   .step-three {
-        background-position: top 50% right -800px;
+    background-position: top 50% right -800px;
   }
 
   .step-four {
-        background-position: top 75% right -800px;
+    background-position: top 75% right -800px;
+  }
+
+  div[data-step="2"]::before {
+    width: 70%;
+    shape-outside: polygon(
+      106.98% -17px,
+      107.12% 88.64%,
+      88.23% 97.01%,
+      60.07% 96.86%,
+      13.51% 97.26%,
+      32.87% 46.1%,
+      26.04% 37.72%,
+      13.4% 40.72%,
+      14.98% 14.15%,
+      18.61% -13.3%,
+      30.51% -28.72%,
+      226px -27.92%
+    );
+  }
+
+  div[data-step="3"]::before {
+    width: 70%;
+    shape-outside: polygon(
+      106.98% -17px,
+      107.12% 88.64%,
+      88.23% 97.01%,
+      60.07% 96.86%,
+      13.51% 97.26%,
+      62.64% 42.38%,
+      45.94% 38.96%,
+      42.42% 29.98%,
+      59.72% -5.07%,
+      52.94% -9.58%,
+      24.3% -19.63%,
+      131px -30.81%
+    );
   }
 
   .capacity {
@@ -2413,6 +2504,12 @@ a:focus {
     -webkit-clip-path: url("#testClip");
             clip-path: url("#testClip");
     margin-left: 0;
+  }
+}
+@media (min-width: 70em) {
+  div[data-step="2"]::before,
+  div[data-step="3"]::before {
+    width: 50%;
   }
 }
 .project {

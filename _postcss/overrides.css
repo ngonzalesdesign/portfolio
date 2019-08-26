@@ -1,7 +1,6 @@
 .hidden {
   display: none !important;
 }
-
 .skip {
   position: absolute;
   left: -10000px;

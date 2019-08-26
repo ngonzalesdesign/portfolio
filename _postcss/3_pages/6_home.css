@@ -5,9 +5,10 @@
   height: 100vh;
 
   padding: 0 var(--std);
-  margin-top: -15vh;
+  margin-top: -13.7vh;
   padding-bottom: 50px;
-
+  position: relative;
+  z-index: 4;
   color: var(--pri);
   background: url("/static/img/starsbg.svg"), var(--black);
   background-size: 1200px;
@@ -35,6 +36,7 @@
   background: var(--white);
   position: absolute;
   z-index: 0;
+  top: -10vh;
   left: calc(-1 * var(--small));
   transform: rotate(90deg);
 }
@@ -89,7 +91,7 @@
   background-position: -30vw 5%;
   background-origin: content-box;
   position: relative;
-  transition: .8s ease;
+  transition: 0.8s ease;
 }
 
 .strengths span {
@@ -106,13 +108,33 @@
   content: "";
   position: fixed;
   left: 0;
-
+  top: 0;
   background-size: 100vw;
-
   background-position: 40% -90%;
 }
 
+.strengths::after {
+  content: "";
 
+  width: 100%;
+
+  height: 120vh;
+
+  background: url("/static/img/cloud.svg") no-repeat,
+    linear-gradient(transparent 15vw, var(--white) 10%);
+
+  position: absolute;
+
+  bottom: calc(-35% + 10vw);
+
+  left: 0;
+
+  background-size: 110vw;
+
+  background-position: -5vw 0;
+
+  z-index: 0;
+}
 
 .strength {
   box-sizing: border-box;
@@ -145,15 +167,16 @@
   grid-gap: var(--std);
 
   padding: var(--std);
-  padding-top: 100px;
-  margin: 0 auto;
 
+  margin: 0 auto;
+  position: relative;
   max-width: 600px;
   color: var(--sec);
 }
 
 .stories {
   position: relative;
+  z-index: 0;
   color: var(--white);
   padding-top: var(--std);
 }
@@ -176,11 +199,14 @@
 @media (--mid) {
   .atf {
     padding: 0 var(--std);
-    height: calc(100vh + 20px);
   }
 
   .atf .nav {
     width: 50vw;
+  }
+
+  .atf .nav::before {
+    top: -20vh;
   }
 
   .intro {
@@ -197,41 +223,21 @@
     width: 120vw;
     height: 100vh;
 
-    -webkit-clip-path: url("#strClip");
-    clip-path: url("#strClip");
-    top: var(--std);
     left: -10vw;
-    opacity: 0;
-  }
-
-  .strengths::after {
-
-    content: '';
-    width: 100%;
-    height: 400px;
-    background: url('/static/img/cloud.svg');
-    position: absolute;
-    bottom: calc(-15% + 10vw);
-    left:0;
-    background-position: -300px;
-
-    background-size: 110vw;
-    background-position: -5vw 0;
-    z-index: -1;
-
-}
-
-  .fixedBG::before {
-    opacity: 1;
   }
 
   .strength {
+    height: calc(100vh + var(--std));
     padding-top: calc(50vh - 100px);
     padding-left: var(--std);
   }
 
   .strength p {
     max-width: 500px;
+  }
+
+  .capacity {
+    padding-top: 100px;
   }
   .stories::before {
     height: 125%;
@@ -256,6 +262,7 @@
   }
 
   .atf .nav::before {
+    top: 0;
     width: 75vw;
     height: 100vh;
     transform: rotate(0deg);
@@ -263,6 +270,7 @@
 
   .strengths {
     background-size: 2000px;
+    background-position: top -75% right -800px;
   }
 
   .strength::before {
@@ -287,15 +295,51 @@
   }
 
   .step-two {
-        background-position: top 25% right -800px;
+    background-position: top 25% right -800px;
   }
 
   .step-three {
-        background-position: top 50% right -800px;
+    background-position: top 50% right -800px;
   }
 
   .step-four {
-        background-position: top 75% right -800px;
+    background-position: top 75% right -800px;
+  }
+
+  div[data-step="2"]::before {
+    width: 70%;
+    shape-outside: polygon(
+      106.98% -17px,
+      107.12% 88.64%,
+      88.23% 97.01%,
+      60.07% 96.86%,
+      13.51% 97.26%,
+      32.87% 46.1%,
+      26.04% 37.72%,
+      13.4% 40.72%,
+      14.98% 14.15%,
+      18.61% -13.3%,
+      30.51% -28.72%,
+      226px -27.92%
+    );
+  }
+
+  div[data-step="3"]::before {
+    width: 70%;
+    shape-outside: polygon(
+      106.98% -17px,
+      107.12% 88.64%,
+      88.23% 97.01%,
+      60.07% 96.86%,
+      13.51% 97.26%,
+      62.64% 42.38%,
+      45.94% 38.96%,
+      42.42% 29.98%,
+      59.72% -5.07%,
+      52.94% -9.58%,
+      24.3% -19.63%,
+      131px -30.81%
+    );
   }
 
   .capacity {
@@ -321,5 +365,12 @@
   .stories::before {
     clip-path: url("#testClip");
     margin-left: 0;
+  }
+}
+
+@media (--super) {
+  div[data-step="2"]::before,
+  div[data-step="3"]::before {
+    width: 50%;
   }
 }

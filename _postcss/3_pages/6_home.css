@@ -369,7 +369,8 @@
 }
 
 @media (--super) {
-  div[data-step="1"]::before div[data-step="2"]::before,
+  div[data-step="1"]::before,
+  div[data-step="2"]::before,
   div[data-step="3"]::before {
     width: 20vw;
   }

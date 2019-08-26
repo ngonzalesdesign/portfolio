@@ -5,7 +5,7 @@
   height: 100vh;
 
   padding: 0 var(--std);
-  margin-top: -13.7vh;
+  margin-top: -100px;
   padding-bottom: 50px;
   position: relative;
   z-index: 4;
@@ -369,8 +369,8 @@
 }
 
 @media (--super) {
-  div[data-step="2"]::before,
+  div[data-step="1"]::before div[data-step="2"]::before,
   div[data-step="3"]::before {
-    width: 50%;
+    width: 20vw;
   }
 }

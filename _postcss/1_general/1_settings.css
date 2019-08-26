@@ -26,9 +26,7 @@
 @custom-media --mid (min-width: 35em);
 @custom-media --wide (min-width: 50em);
 @custom-media --super (min-width: 70em);
-
-/*----- VARIABLES -----*/
-:root {
+@custom-media --tall (min-height: ) /*----- VARIABLES -----*/ :root {
   /* Colors */
   --pri: #aa469b;
   --sec: #7b3470;

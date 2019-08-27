@@ -19,16 +19,16 @@ function animatePage(response) {
       break;
     case stepNum === "1":
       function animateBTF() {
-        strengths.classList = `${defaultCls} step-one`;
+        strengths.classList = `${defaultCls} step-1`;
         nav.classList = "fixed";
       }
       setTimeout(animateBTF, 500);
       break;
     case stepNum === "2":
-      strengths.classList = `${defaultCls} step-two`;
+      strengths.classList = `${defaultCls} step-2`;
       break;
     case stepNum === "3":
-      strengths.classList = `${defaultCls} step-three`;
+      strengths.classList = `${defaultCls} step-3`;
       break;
   }
 }
@@ -41,12 +41,6 @@ scroller
   .onStepEnter(function(response) {
     scrollToTop(response, "down");
     animatePage(response);
-
-    if (response.element.classList.contains("strength")) {
-      strengths.classList.add("fixedBG");
-    } else {
-      strengths.classList.remove("fixedBG");
-    }
   })
   .onStepExit(function(response) {
     if (response.direction == "down") {
@@ -72,3 +66,4 @@ scroller2
   });
 
 window.addEventListener("resize", scroller.resize);
+window.addEventListener("resize", scroller2.resize);

@@ -2426,19 +2426,19 @@ a:focus {
     );
   }
 
-  .step-one {
+  .step-1 {
     background-position: top 0 right -800px;
   }
 
-  .step-two {
+  .step-2 {
     background-position: top 25% right -800px;
   }
 
-  .step-three {
+  .step-3 {
     background-position: top 50% right -800px;
   }
 
-  .step-four {
+  .step-4 {
     background-position: top 75% right -800px;
   }
 
@@ -2507,10 +2507,8 @@ a:focus {
   }
 }
 @media (min-width: 70em) {
-  div[data-step="1"]::before,
-  div[data-step="2"]::before,
-  div[data-step="3"]::before {
-    width: 20vw;
+  .strength::before {
+    display: none;
   }
 }
 .project {

@@ -54,6 +54,11 @@
   }
 }
 
+.blog p,
+.blog a {
+  line-height: 1.7;
+}
+
 .blog img {
   margin: var(--std) 0;
 }

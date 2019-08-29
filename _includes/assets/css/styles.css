@@ -1847,6 +1847,10 @@ a:focus {
     margin-bottom: 20px;
     margin-bottom: var(--std);
   }
+.blog p,
+.blog a {
+  line-height: 1.7;
+}
 .blog img {
   margin: 20px 0;
   margin: var(--std) 0;

@@ -1838,6 +1838,23 @@ a:focus {
   margin-top: 5px;
   margin-top: var(--small);
 }
+.blog h1,
+  .blog h2,
+  .blog h3,
+  .blog h4,
+  .blog h5,
+  .blog h6 {
+    margin-bottom: 20px;
+    margin-bottom: var(--std);
+  }
+.blog p,
+.blog a {
+  line-height: 1.7;
+}
+.blog img {
+  margin: 20px 0;
+  margin: var(--std) 0;
+}
 @media (min-width: 50em) {
   .blog {
     max-width: 1000px;

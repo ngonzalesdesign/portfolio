@@ -685,7 +685,7 @@ footer {
 }
 .button {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   display: block;
   min-width: 80%;
   margin: 0 auto;
@@ -1579,16 +1579,16 @@ a:focus {
   font-weight: normal;
 }
 .testimonial:first-child {
-  -webkit-animation: slide1 9s infinite;
-          animation: slide1 9s infinite;
+  -webkit-animation: slide1 32s infinite;
+          animation: slide1 32s infinite;
 }
 .testimonial:nth-child(2) {
-  -webkit-animation: slide2 9s infinite;
-          animation: slide2 9s infinite;
+  -webkit-animation: slide2 32s infinite;
+          animation: slide2 32s infinite;
 }
 .testimonial:nth-child(3) {
-  -webkit-animation: slide3 9s infinite;
-          animation: slide3 9s infinite;
+  -webkit-animation: slide3 32s infinite;
+          animation: slide3 32s infinite;
 }
 @-webkit-keyframes slide1 {
   0% {
@@ -2295,9 +2295,9 @@ a:focus {
   display: grid;
   grid-gap: 20px;
   grid-gap: var(--std);
-
+  background: #f3efe7;
+  background: var(--white);
   padding: 20px;
-
   padding: var(--std);
 
   margin: 0 auto;
@@ -2311,8 +2311,6 @@ a:focus {
   z-index: 0;
   color: #f3efe7;
   color: var(--white);
-  padding-top: 20px;
-  padding-top: var(--std);
 }
 .stories::before {
   background: #261525;

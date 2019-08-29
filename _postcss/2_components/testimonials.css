@@ -33,15 +33,15 @@
 }
 
 .testimonial:first-child {
-  animation: slide1 9s infinite;
+  animation: slide1 32s infinite;
 }
 
 .testimonial:nth-child(2) {
-  animation: slide2 9s infinite;
+  animation: slide2 32s infinite;
 }
 
 .testimonial:nth-child(3) {
-  animation: slide3 9s infinite;
+  animation: slide3 32s infinite;
 }
 
 @keyframes slide1 {

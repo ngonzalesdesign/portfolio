@@ -165,7 +165,7 @@
 .capacity {
   display: grid;
   grid-gap: var(--std);
-background: var(--white)
+  background: var(--white);
   padding: var(--std);
 
   margin: 0 auto;
@@ -178,7 +178,6 @@ background: var(--white)
   position: relative;
   z-index: 0;
   color: var(--white);
-
 }
 
 .stories::before {

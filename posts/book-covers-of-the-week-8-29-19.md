@@ -13,6 +13,7 @@ tags:
   - ''
 ---
 ![](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1426040983l/25109947.jpg)
+
 <h2 class="h5"><a href="https://www.goodreads.com/book/show/25109947-lovecraft-country">Lovecraft Country</a> by Matt Ruff</h2>
 
 This book is a fantastic read, and I'm so glad it got a cover that did it justice. <a href="https://jarrodtaylordesign.com/">Jarrod Taylor</a>'s design truly reflects on story within, from the 50s pulp style to the spooky tentacles doubling as Klansmen which perfectly captures the book's use of racism as horror.

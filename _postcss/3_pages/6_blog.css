@@ -43,6 +43,21 @@
   margin-top: var(--small);
 }
 
+.blog {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: var(--std);
+  }
+}
+
+.blog img {
+  margin: var(--std) 0;
+}
+
 @media (--wide) {
   .blog {
     max-width: 1000px;

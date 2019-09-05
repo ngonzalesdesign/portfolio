@@ -1,5 +1,5 @@
 ---
-title: Book Covers of the Week - 8/29/19
+title: Book Covers of the Month - 8/29/19
 date: 2019-08-29T19:27:19.374Z
 summary: >-
   This book is a fantastic read, and I'm so glad it got a cover that did it
@@ -9,7 +9,7 @@ summary: >-
 tags:
   - post
   - books
-  - covers of the week
+  - covers
   - ''
 ---
 ![A worn looking book cover featuring an illustration of a mansion on a hill with white tentacles coming up from the bottom edge](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1426040983l/25109947.jpg)
